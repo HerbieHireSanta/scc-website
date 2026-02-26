@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Received — Santa Claus and Company</title>
+  <meta name="robots" content="noindex" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Santa Claus and Company","url":"https://santaclausandcompany.com","telephone":"+16029548697","email":"santa@santaclausandcompany.com","foundingDate":"1972","areaServed":{"@type":"Country","name":"United States"},"address":{"@type":"PostalAddress","addressLocality":"Phoenix","addressRegion":"AZ","addressCountry":"US"},"sameAs":["https://www.hiresanta.com"]}
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --green:#1c3a28;--green-mid:#244d34;--green-deep:#152d1f;--red:#8b2020;--red-bright:#a52828;--gold:#c9a050;--gold-light:#e2c07a;--parchment:#f7f1e6;--parchment2:#efe8d8;--cream:#fdfaf5;--text:#1a1a1a;--muted:#5a5a5a; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--parchment); overflow-x: hidden; }
+    nav { background: var(--green-deep); border-bottom: 2px solid var(--gold); padding: 0 60px; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .logo-wrap { display: flex; flex-direction: column; align-items: center; text-decoration: none; gap: 1px; }
+    .logo-est { font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+    .logo-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #fff; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+    .logo-rule { display: flex; align-items: center; gap: 6px; color: var(--gold); font-size: 0.6rem; letter-spacing: 0.2em; }
+    .logo-rule::before, .logo-rule::after { content: '—'; }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.83rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-cta { background: var(--red) !important; color: #fff !important; padding: 10px 24px; border-radius: 2px; font-weight: 600 !important; letter-spacing: 0.06em !important; text-transform: uppercase; font-size: 0.76rem !important; }
+    .nav-cta:hover { background: var(--red-bright) !important; }
+    .ty-section { min-height: calc(100vh - 68px); display: flex; align-items: center; justify-content: center; padding: 80px 24px; background: var(--green-deep); position: relative; overflow: hidden; }
+    .ty-section::before { content: ''; position: absolute; inset: 0; background: url('https://www.hiresanta.com/wp-content/uploads/2018/11/edited-santa.jpg') center/cover; opacity: 0.07; }
+    .ty-card { position: relative; z-index: 2; max-width: 600px; text-align: center; }
+    .ty-icon { font-size: 4rem; margin-bottom: 24px; display: block; }
+    .ty-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; display: block; }
+    .ty-card h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 2.8rem); color: #fff; font-weight: 700; line-height: 1.15; margin-bottom: 20px; }
+    .ty-divider { width: 48px; height: 2px; background: var(--gold); margin: 0 auto 28px; }
+    .ty-card p { color: rgba(255,255,255,0.65); font-size: 1rem; line-height: 1.8; margin-bottom: 16px; }
+    .ty-card p.highlight { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic; color: rgba(255,255,255,0.8); }
+    .ty-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
+    .btn-gold { display: inline-block; background: var(--gold); color: var(--green-deep); padding: 14px 32px; border-radius: 2px; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+    .btn-gold:hover { background: var(--gold-light); }
+    .btn-outline { display: inline-block; border: 1.5px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.8); padding: 13px 28px; border-radius: 2px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    .ty-contact { margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); }
+    .ty-contact p { font-size: 0.83rem; color: rgba(255,255,255,0.45); margin-bottom: 8px; }
+    .ty-contact a { color: var(--gold); text-decoration: none; font-weight: 600; }
+    footer { background: #080c10; padding: 56px 60px 28px; border-top: 3px solid var(--gold); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 0.77rem; color: rgba(255,255,255,0.2); flex-wrap: wrap; gap: 10px; }
+    .footer-family a { color: rgba(255,255,255,0.3); text-decoration: none; }
+    .footer-family a:hover { color: var(--gold); }
+    @media (max-width: 900px) { nav { padding: 0 20px; } }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <span class="logo-est">Est. 1972</span>
+    <span class="logo-name">Santa Claus &amp; Company</span>
+    <span class="logo-rule">Nationwide</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="services/">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="rates.html">Rates</a></li>
+    <li><a href="locations/">Locations</a></li>
+    <li><a href="hire-santa.html" class="nav-cta">Book Santa</a></li>
+  </ul>
+</nav>
+<section class="ty-section">
+  <div class="ty-card">
+    <span class="ty-icon">🎅</span>
+    <span class="ty-eyebrow">Request Received</span>
+    <h1>We've Got Your Request.<br />Santa Is On His Way.</h1>
+    <div class="ty-divider"></div>
+    <p class="highlight">"You'll hear from us within 24 hours — usually sooner."</p>
+    <p>A member of our team will review your inquiry and reach back out with availability, pricing, and any follow-up questions. We've been doing this since 1972 — we take every booking seriously.</p>
+    <p>In the meantime, feel free to browse our services or read more about who we are and how we work.</p>
+    <div class="ty-actions">
+      <a href="services/" class="btn-gold">Browse Our Services</a>
+      <a href="index.html" class="btn-outline">Return Home</a>
+    </div>
+    <div class="ty-contact">
+      <p>Need to reach us directly?</p>
+      <p><a href="tel:6029548697">(602) 954-8697</a> &nbsp;|&nbsp; <a href="mailto:santa@santaclausandcompany.com">santa@santaclausandcompany.com</a></p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-bottom">
+    <span>© 2026 Santa Claus and Company. All rights reserved.</span>
+    <span class="footer-family">Part of the <a href="https://www.hiresanta.com" target="_blank">HireSanta.com</a> family of companies.</span>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santa Claus Home Visits — Santa at Your Door | Santa Claus and Company</title>
+  <meta name="description" content="Book a professional Santa Claus for a home visit. Santa Claus and Company sends fully vetted, background-checked Santas to your home nationwide. Since 1972." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Santa Claus and Company","url":"https://santaclausandcompany.com","telephone":"+16029548697","email":"santa@santaclausandcompany.com","foundingDate":"1972","description":"America's oldest Santa Claus staffing agency, serving families and businesses nationwide since 1972.","areaServed":{"@type":"Country","name":"United States"},"address":{"@type":"PostalAddress","addressLocality":"Phoenix","addressRegion":"AZ","addressCountry":"US"},"sameAs":["https://www.hiresanta.com"]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What happens during a home visit — how does it work?","acceptedAnswer":{"@type":"Answer","text":"Santa arrives at your door in full costume, typically with bells jingling. He spends 30–60 minutes with your family — listening to wish lists, reviewing the naughty/nice list, distributing any gifts you've prepared, and taking photos. Before the visit, we'll ask for children's names, ages, and any specific details Santa should know. The visit is personal and entirely in-character."}},
+    {"@type":"Question","name":"How should I prepare for a Santa home visit?","acceptedAnswer":{"@type":"Answer","text":"Have a wish list ready for each child. Decide on a spot for Santa's 'throne' — a nice chair by the fireplace works perfectly. Keep small gifts nearby if you'd like Santa to distribute them. Most importantly: have your camera ready and let the kids help answer the door. The anticipation of that knock is half the magic."}}
+  ]}
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --green:#1c3a28;--green-mid:#244d34;--green-deep:#152d1f;--red:#8b2020;--red-bright:#a52828;--gold:#c9a050;--gold-light:#e2c07a;--parchment:#f7f1e6;--parchment2:#efe8d8;--cream:#fdfaf5;--text:#1a1a1a;--muted:#5a5a5a; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--parchment); overflow-x: hidden; }
+    nav { background: var(--green-deep); border-bottom: 2px solid var(--gold); padding: 0 60px; display: flex; align-items: center; justify-content: space-between; height: 68px; position: sticky; top: 0; z-index: 100; }
+    .logo-wrap { display: flex; flex-direction: column; align-items: center; text-decoration: none; gap: 1px; }
+    .logo-est { font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+    .logo-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #fff; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+    .logo-rule { display: flex; align-items: center; gap: 6px; color: var(--gold); font-size: 0.6rem; letter-spacing: 0.2em; }
+    .logo-rule::before, .logo-rule::after { content: '—'; }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.83rem; font-weight: 500; letter-spacing: 0.04em; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-cta { background: var(--red) !important; color: #fff !important; padding: 10px 24px; border-radius: 2px; font-weight: 600 !important; letter-spacing: 0.06em !important; text-transform: uppercase; font-size: 0.76rem !important; }
+    .nav-cta:hover { background: var(--red-bright) !important; }
+    .breadcrumb { background: var(--green); padding: 12px 60px; display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.5); }
+    .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; } .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb-sep { color: rgba(255,255,255,0.25); } .breadcrumb-current { color: var(--gold-light); }
+    .page-hero { position: relative; min-height: 420px; display: flex; align-items: flex-end; overflow: hidden; }
+    .page-hero-bg { position: absolute; inset: 0; background: url('https://www.hiresanta.com/wp-content/uploads/2022/10/family-events.jpg') center/cover no-repeat; }
+    .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(21,45,31,0.95) 20%, rgba(21,45,31,0.6) 60%, rgba(21,45,31,0.3) 100%); }
+    .page-hero-content { position: relative; z-index: 2; padding: 60px 72px; width: 100%; }
+    .page-hero-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .eyebrow-line { width: 28px; height: 1px; background: var(--gold); }
+    .eyebrow-text { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3.2rem); color: #fff; font-weight: 700; line-height: 1.1; max-width: 700px; margin-bottom: 16px; }
+    .page-hero-sub { color: rgba(255,255,255,0.65); font-size: 1rem; line-height: 1.7; max-width: 580px; font-weight: 300; }
+    .page-body { max-width: 1160px; margin: 0 auto; padding: 72px 60px; display: grid; grid-template-columns: 1fr 360px; gap: 72px; align-items: start; }
+    .content h2 { font-family: 'Playfair Display', serif; font-size: 1.9rem; color: var(--green-deep); font-weight: 700; margin-bottom: 16px; line-height: 1.2; }
+    .content h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--green-deep); font-weight: 600; margin: 32px 0 12px; }
+    .content p { color: var(--muted); font-size: 0.95rem; line-height: 1.85; margin-bottom: 18px; }
+    .content p strong { color: var(--text); }
+    .section-ornament-left { display: flex; align-items: center; gap: 12px; margin: 12px 0 28px; color: var(--gold); }
+    .section-ornament-left::after { content: ''; display: block; width: 60px; height: 1px; background: var(--gold); }
+    .feature-photo { width: 100%; border-radius: 3px; overflow: hidden; margin: 32px 0; }
+    .feature-photo img { width: 100%; display: block; aspect-ratio: 16/9; object-fit: cover; }
+    .feature-photo-caption { background: var(--green); color: rgba(255,255,255,0.6); font-size: 0.75rem; padding: 10px 16px; text-align: center; font-style: italic; }
+    .include-list { list-style: none; margin: 20px 0 28px; display: flex; flex-direction: column; gap: 12px; }
+    .include-list li { display: flex; align-items: flex-start; gap: 14px; font-size: 0.92rem; color: var(--text); line-height: 1.6; padding-bottom: 12px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .include-list li:last-child { border-bottom: none; }
+    .include-list li::before { content: '✓'; width: 22px; height: 22px; min-width: 22px; background: var(--green); color: #fff; border-radius: 50%; font-size: 0.7rem; font-weight: 900; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+    .faq-list { border-top: 1px solid rgba(28,58,40,0.1); margin: 20px 0 36px; }
+    .faq-item { border-bottom: 1px solid rgba(28,58,40,0.1); }
+    .faq-q { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 18px 0; background: none; border: none; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.93rem; font-weight: 600; color: var(--green-deep); text-align: left; gap: 16px; }
+    .faq-q:hover { color: var(--red); }
+    .faq-arrow { font-size: 1.3rem; color: var(--gold); transition: transform 0.2s; flex-shrink: 0; }
+    .faq-q.open .faq-arrow { transform: rotate(90deg); }
+    .faq-a { display: none; padding: 0 0 18px; }
+    .faq-a.open { display: block; }
+    .faq-a p { color: var(--muted); font-size: 0.9rem; line-height: 1.8; }
+    .sidebar { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-form { background: var(--green-deep); border-radius: 3px; overflow: hidden; box-shadow: 0 16px 48px rgba(0,0,0,0.15); }
+    .sidebar-form-header { background: var(--red); padding: 20px 24px; text-align: center; }
+    .sidebar-form-header .eyebrow { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 4px; display: block; }
+    .sidebar-form-header h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #fff; font-weight: 700; line-height: 1.2; }
+    .sidebar-form-body { padding: 24px; }
+    .sidebar-contact { background: var(--cream); border: 1px solid rgba(28,58,40,0.1); border-radius: 3px; padding: 24px; }
+    .sidebar-contact h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--green-deep); margin-bottom: 16px; font-weight: 700; }
+    .contact-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .contact-icon { font-size: 1.1rem; }
+    .contact-row p { font-size: 0.83rem; color: var(--muted); line-height: 1.4; }
+    .contact-row a { color: var(--green); font-weight: 600; text-decoration: none; font-size: 0.95rem; display: block; }
+    .sidebar-trust { background: var(--parchment2); border-radius: 3px; padding: 24px; border-left: 3px solid var(--gold); }
+    .sidebar-trust h4 { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; font-weight: 700; }
+    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 0.83rem; color: var(--text); margin-bottom: 10px; }
+    .trust-item:last-child { margin-bottom: 0; }
+    .trust-check { color: var(--green); font-weight: 700; font-size: 0.75rem; }
+    footer { background: #080c10; padding: 72px 60px 32px; border-top: 3px solid var(--gold); }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr; gap: 56px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .footer-brand-name { font-family: 'Playfair Display', serif; color: #fff; font-size: 1.15rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+    .footer-brand-sub { font-size: 0.65rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-brand-rule { width: 40px; height: 1px; background: var(--gold); margin-bottom: 16px; }
+    .footer-brand p { font-size: 0.83rem; color: rgba(255,255,255,0.35); line-height: 1.75; max-width: 260px; }
+    .footer-contact { margin-top: 20px; }
+    .footer-contact a { display: block; color: rgba(255,255,255,0.4); font-size: 0.82rem; text-decoration: none; margin-bottom: 7px; }
+    .footer-contact a:hover { color: var(--gold); }
+    .fc h4 { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 20px; font-weight: 700; }
+    .fc ul { list-style: none; }
+    .fc ul li { margin-bottom: 11px; }
+    .fc ul li a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.85rem; }
+    .fc ul li a:hover { color: var(--gold-light); }
+    .footer-est { text-align: center; }
+    .footer-est-ornament { color: var(--gold); font-size: 0.7rem; display: block; letter-spacing: 0.1em; margin-bottom: 6px; }
+    .footer-est-year { font-family: 'Playfair Display', serif; font-size: 2.4rem; color: #fff; line-height: 1; border: 1px solid rgba(201,160,80,0.3); padding: 16px 24px; display: inline-block; }
+    .footer-est-label { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-top: 8px; display: block; }
+    .footer-bottom { padding-top: 28px; display: flex; justify-content: space-between; align-items: center; font-size: 0.77rem; color: rgba(255,255,255,0.2); flex-wrap: wrap; gap: 10px; }
+    .footer-family a { color: rgba(255,255,255,0.3); text-decoration: none; }
+    .footer-family a:hover { color: var(--gold); }
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; } .breadcrumb { padding: 10px 20px; } .page-hero-content { padding: 40px 24px; }
+      .page-body { grid-template-columns: 1fr; padding: 48px 24px; gap: 40px; } .sidebar { position: static; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; } footer { padding: 48px 24px 24px; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="logo-wrap">
+    <span class="logo-est">Est. 1972</span>
+    <span class="logo-name">Santa Claus &amp; Company</span>
+    <span class="logo-rule">Nationwide</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../services/">Services</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../rates.html">Rates</a></li>
+    <li><a href="../locations/">Locations</a></li>
+    <li><a href="../hire-santa.html" class="nav-cta">Book Santa</a></li>
+  </ul>
+</nav>
+<div class="breadcrumb">
+  <a href="../index.html">Home</a>
+  <span class="breadcrumb-sep">›</span>
+  <a href="../services/">Services</a>
+  <span class="breadcrumb-sep">›</span>
+  <span class="breadcrumb-current">Home Visits</span>
+</div>
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Santa Claus Home Visits</span>
+    </div>
+    <h1>Santa at Your Front Door.<br />Christmas Eve Magic.</h1>
+    <p class="page-hero-sub">The most personal Santa experience we offer. A fully vetted, professional Santa arrives at your home, knows your children's names, and delivers a visit they'll describe to their own kids one day.</p>
+  </div>
+</section>
+<div class="page-body">
+  <main class="content">
+    <h2>A Santa Visit They'll Remember for Life</h2>
+    <div class="section-ornament-left"><span style="color:var(--gold)">✦</span></div>
+    <p>Picture this: Christmas Eve, the kids are buzzing with anticipation. The doorbell rings. There's a sound of bells from outside. And then — Santa Claus walks through your front door, calling each child by name, pulling out a list, and settling in like he's been coming to your house for years.</p>
+    <p>That's what a Santa Claus and Company home visit looks like. Not someone who shows up in a borrowed suit and reads from a generic script. A real entertainer who has been briefed on your family, prepared a personalized visit, and committed to staying fully in character from the moment he arrives to the moment he waves goodbye from the doorstep.</p>
+    <p>We've been delivering these moments since 1972. Whether you're in Phoenix, Dallas, Chicago, or anywhere in between, we can make it happen.</p>
+
+    <div class="feature-photo">
+      <img src="https://www.hiresanta.com/wp-content/uploads/2022/10/family-events.jpg" alt="Santa Claus home visit with family" />
+      <div class="feature-photo-caption">A Santa Claus and Company entertainer during a home visit — fully in character, from arrival to departure.</div>
+    </div>
+
+    <h3>What's Included in a Home Visit</h3>
+    <ul class="include-list">
+      <li>Santa in full, professional-grade costume (real beard available on request)</li>
+      <li>Personalized preparation — we brief Santa on your children's names, ages, and wish lists</li>
+      <li>A fully in-character visit: 30–60 minutes depending on your booking</li>
+      <li>Naughty/nice list review, gift distribution (if you provide gifts), and photos</li>
+      <li>A memorable arrival — doorbell ring, sleigh bells, dramatic entrance designed for your home</li>
+    </ul>
+
+    <h3>How Far in Advance Should I Book?</h3>
+    <p>December weekend evenings — especially December 23rd and 24th — are the first dates to sell out, often by early November. If you want a specific date and time, book as early as you can. We typically advise 6–8 weeks for December bookings. That said, if you're looking last minute, call us — we'll do what we can.</p>
+
+    <h3>Nationwide Home Visit Service</h3>
+    <p>We send Santas to homes across the country. Our network covers major metros and surrounding areas in Arizona, California, Texas, New York, Florida, Illinois, Colorado, Nevada, Washington, Georgia, Massachusetts, Tennessee, and beyond. If you're wondering whether we cover your area, ask — the answer is usually yes.</p>
+
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What happens during a home visit — how does it work? <span class="faq-arrow">›</span></button>
+        <div class="faq-a"><p>Santa arrives at your door in full costume, typically with bells jingling. He spends 30–60 minutes with your family — listening to wish lists, reviewing the naughty/nice list, distributing any gifts you've prepared, and taking photos. Before the visit, we'll ask for children's names, ages, and any specific details Santa should know. The visit is personal and entirely in-character.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How should I prepare for a Santa home visit? <span class="faq-arrow">›</span></button>
+        <div class="faq-a"><p>Have a wish list ready for each child. Decide on a spot for Santa's 'throne' — a nice chair by the fireplace works perfectly. Keep small gifts nearby if you'd like Santa to distribute them. Most importantly: have your camera ready and let the kids help answer the door. The anticipation of that knock is half the magic.</p></div>
+      </div>
+    </div>
+  </main>
+  <aside class="sidebar" id="book">
+    <div class="sidebar-form">
+      <div class="sidebar-form-header">
+        <span class="eyebrow">Book a Home Visit</span>
+        <h3>Reserve Your Santa Now</h3>
+      </div>
+      <div class="sidebar-form-body">
+        <!-- [gravityforms id="1"] -->
+        <div style="background:rgba(255,255,255,0.05);border-radius:2px;padding:20px;text-align:center;color:rgba(255,255,255,0.4);font-size:0.85rem;">Loading form...</div>
+      </div>
+    </div>
+    <div class="sidebar-contact">
+      <h4>Questions?</h4>
+      <div class="contact-row"><span class="contact-icon">📞</span><div><p>Call us directly</p><a href="tel:6029548697">(602) 954-8697</a></div></div>
+      <div class="contact-row"><span class="contact-icon">✉️</span><div><p>Email us</p><a href="mailto:santa@santaclausandcompany.com" style="font-size:0.8rem;">santa@santaclausandcompany.com</a></div></div>
+    </div>
+    <div class="sidebar-trust">
+      <h4>Why Book With Us</h4>
+      <div class="trust-item"><span class="trust-check">✓</span> Founded 1972 — oldest in the US</div>
+      <div class="trust-item"><span class="trust-check">✓</span> All Santas background-checked</div>
+      <div class="trust-item"><span class="trust-check">✓</span> Personalized for your family</div>
+      <div class="trust-item"><span class="trust-check">✓</span> 24-hr response guaranteed</div>
+      <div class="trust-item"><span class="trust-check">✓</span> Available nationwide</div>
+    </div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Santa Claus &amp; Company</div>
+      <div class="footer-brand-sub">Est. 1972 &nbsp;·&nbsp; Nationwide</div>
+      <div class="footer-brand-rule"></div>
+      <p>America's original Santa Claus staffing agency. Connecting families and businesses with exceptional, vetted Santas since 1972.</p>
+      <div class="footer-contact">
+        <a href="tel:6029548697">📞 (602) 954-8697</a>
+        <a href="mailto:santa@santaclausandcompany.com">✉ santa@santaclausandcompany.com</a>
+      </div>
+    </div>
+    <div class="fc"><h4>Services</h4><ul>
+      <li><a href="home-visits.html">Home Visits</a></li>
+      <li><a href="corporate-events.html">Corporate Events</a></li>
+      <li><a href="mall-retail.html">Mall &amp; Retail</a></li>
+      <li><a href="parades.html">Parades</a></li>
+      <li><a href="school-daycare.html">Schools &amp; Daycares</a></li>
+      <li><a href="charity-events.html">Charity Events</a></li>
+    </ul></div>
+    <div class="fc"><h4>Company</h4><ul>
+      <li><a href="../about.html">About Us</a></li>
+      <li><a href="../hire-santa.html">Book Santa</a></li>
+      <li><a href="../rates.html">Rates &amp; Pricing</a></li>
+      <li><a href="../faq.html">FAQ</a></li>
+      <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+    </ul></div>
+    <div class="footer-est">
+      <span class="footer-est-ornament">✦ &nbsp; Since &nbsp; ✦</span>
+      <div class="footer-est-year">EST.<br />1972</div>
+      <span class="footer-est-label">America's Original Santa Agency</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Santa Claus and Company. All rights reserved.</span>
+    <span class="footer-family">Part of the <a href="https://www.hiresanta.com" target="_blank">HireSanta.com</a> family of companies.</span>
+  </div>
+</footer>
+<script>
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('open'); b.nextElementSibling.classList.remove('open'); });
+    if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+  }
+</script>
+</body>
+</html>

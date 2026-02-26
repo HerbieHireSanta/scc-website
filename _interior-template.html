@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santa Claus for Hire in Phoenix, AZ — Santa Claus and Company</title>
+  <meta name="description" content="Hire a professional Santa Claus in Phoenix, AZ. Santa Claus and Company — Arizona's original Santa staffing agency since 1972. Home visits, corporate events, parades & more." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Santa Claus and Company",
+    "url": "https://santaclausandcompany.com",
+    "telephone": "+16029548697",
+    "email": "santa@santaclausandcompany.com",
+    "foundingDate": "1972",
+    "description": "Arizona's original Santa Claus staffing agency, serving families and businesses since 1972. Professional, vetted Santa Claus entertainers for home visits, corporate events, malls, parades, and more.",
+    "areaServed": {
+      "@type": "City",
+      "name": "Phoenix",
+      "addressRegion": "AZ"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Phoenix",
+      "addressRegion": "AZ",
+      "addressCountry": "US"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "120"
+    },
+    "sameAs": ["https://www.hiresanta.com"]
+  }
+  </script>
+
+  <!-- FAQPage Schema (page-specific questions only) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How far in advance should I book a Santa in Phoenix?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We recommend booking at least 4–6 weeks before your event, especially for December dates. Phoenix is a large market and our most popular Santas fill up fast. That said, we do accommodate last-minute requests when availability allows — call us directly for urgent bookings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you serve Scottsdale, Mesa, and other cities in the Phoenix metro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We serve the entire Greater Phoenix area including Scottsdale, Tempe, Mesa, Chandler, Gilbert, Glendale, Peoria, Avondale, Goodyear, Anthem, Cave Creek, and Queen Creek. Travel fees may apply for locations beyond a certain radius."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are your Phoenix Santas background-checked?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Every Santa in our network undergoes a thorough background check before joining our roster. We've maintained this standard since 1972 because your family's safety is non-negotiable."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:      #1c3a28;
+      --green-mid:  #244d34;
+      --green-deep: #152d1f;
+      --red:        #8b2020;
+      --red-bright: #a52828;
+      --gold:       #c9a050;
+      --gold-light: #e2c07a;
+      --parchment:  #f7f1e6;
+      --parchment2: #efe8d8;
+      --cream:      #fdfaf5;
+      --text:       #1a1a1a;
+      --muted:      #5a5a5a;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--parchment); overflow-x: hidden; }
+
+    /* ── NAV (same as homepage) ── */
+    nav {
+      background: var(--green-deep);
+      border-bottom: 2px solid var(--gold);
+      padding: 0 60px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .logo-wrap { display: flex; flex-direction: column; align-items: center; text-decoration: none; gap: 1px; }
+    .logo-est { font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+    .logo-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #fff; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+    .logo-rule { display: flex; align-items: center; gap: 6px; color: var(--gold); font-size: 0.6rem; letter-spacing: 0.2em; }
+    .logo-rule::before, .logo-rule::after { content: '—'; }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.83rem; font-weight: 500; letter-spacing: 0.04em; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-cta { background: var(--red) !important; color: #fff !important; padding: 10px 24px; border-radius: 2px; font-weight: 600 !important; letter-spacing: 0.06em !important; text-transform: uppercase; font-size: 0.76rem !important; }
+    .nav-cta:hover { background: var(--red-bright) !important; }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      background: var(--green);
+      padding: 12px 60px;
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.75rem; color: rgba(255,255,255,0.5);
+    }
+    .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb-sep { color: rgba(255,255,255,0.25); }
+    .breadcrumb-current { color: var(--gold-light); }
+
+    /* ── PAGE HERO (shorter than homepage) ── */
+    .page-hero {
+      position: relative;
+      min-height: 420px;
+      display: flex; align-items: flex-end;
+      overflow: hidden;
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background: url('https://www.hiresanta.com/wp-content/uploads/2018/11/edited-santa.jpg') center 20%/cover no-repeat;
+    }
+    .page-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(21,45,31,0.95) 20%, rgba(21,45,31,0.6) 60%, rgba(21,45,31,0.3) 100%);
+    }
+    .page-hero-content {
+      position: relative; z-index: 2;
+      padding: 60px 72px;
+      width: 100%;
+    }
+    .page-hero-eyebrow {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 14px;
+    }
+    .eyebrow-line { width: 28px; height: 1px; background: var(--gold); }
+    .eyebrow-text { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      color: #fff; font-weight: 700; line-height: 1.1;
+      max-width: 700px; margin-bottom: 16px;
+    }
+    .page-hero-sub {
+      color: rgba(255,255,255,0.65);
+      font-size: 1rem; line-height: 1.7;
+      max-width: 580px; font-weight: 300;
+    }
+
+    /* ── MAIN LAYOUT ── */
+    .page-body {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 72px 60px;
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 72px;
+      align-items: start;
+    }
+
+    /* ── MAIN CONTENT ── */
+    .content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem; color: var(--green-deep);
+      font-weight: 700; margin-bottom: 16px; line-height: 1.2;
+    }
+    .content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; color: var(--green-deep);
+      font-weight: 600; margin: 32px 0 12px;
+    }
+    .content p {
+      color: var(--muted); font-size: 0.95rem; line-height: 1.85;
+      margin-bottom: 18px;
+    }
+    .content p strong { color: var(--text); }
+    .section-ornament-left {
+      display: flex; align-items: center; gap: 12px;
+      margin: 12px 0 28px;
+      color: var(--gold);
+    }
+    .section-ornament-left::after { content: ''; display: block; width: 60px; height: 1px; background: var(--gold); }
+
+    /* ── FEATURE PHOTO ── */
+    .feature-photo {
+      width: 100%; border-radius: 3px; overflow: hidden;
+      margin: 32px 0;
+      position: relative;
+    }
+    .feature-photo img {
+      width: 100%; display: block;
+      aspect-ratio: 16/9; object-fit: cover;
+    }
+    .feature-photo-caption {
+      background: var(--green);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem; padding: 10px 16px;
+      text-align: center; font-style: italic;
+    }
+
+    /* ── PHOTO PAIR ── */
+    .photo-pair {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 12px; margin: 32px 0;
+    }
+    .photo-pair img {
+      width: 100%; border-radius: 3px;
+      aspect-ratio: 4/5; object-fit: cover; object-position: top;
+      display: block;
+    }
+
+    /* ── WHY LIST ── */
+    .why-list { list-style: none; margin: 20px 0 28px; display: flex; flex-direction: column; gap: 14px; }
+    .why-list li {
+      display: flex; align-items: flex-start; gap: 14px;
+      font-size: 0.92rem; color: var(--text); line-height: 1.6;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .why-list li:last-child { border-bottom: none; }
+    .why-icon {
+      width: 34px; height: 34px; min-width: 34px;
+      background: var(--green);
+      border-radius: 2px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; margin-top: 1px;
+    }
+    .why-list li strong { display: block; color: var(--green-deep); margin-bottom: 2px; font-size: 0.9rem; }
+
+    /* ── SERVICE TYPES (city page) ── */
+    .service-types {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 14px; margin: 28px 0;
+    }
+    .stype {
+      background: var(--cream);
+      border: 1px solid rgba(28,58,40,0.1);
+      border-radius: 3px;
+      padding: 20px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .stype:hover { border-color: var(--gold); transform: translateY(-2px); }
+    .stype-icon { font-size: 1.4rem; margin-bottom: 8px; display: block; }
+    .stype h4 { font-size: 0.85rem; font-weight: 700; color: var(--green-deep); margin-bottom: 4px; letter-spacing: 0.03em; }
+    .stype p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+
+    /* ── FAQ ── */
+    .faq-list { margin: 20px 0 36px; border-top: 1px solid rgba(28,58,40,0.1); }
+    .faq-item { border-bottom: 1px solid rgba(28,58,40,0.1); }
+    .faq-q {
+      width: 100%; display: flex; justify-content: space-between; align-items: center;
+      padding: 18px 0; background: none; border: none; cursor: pointer;
+      font-family: 'Inter', sans-serif; font-size: 0.93rem; font-weight: 600;
+      color: var(--green-deep); text-align: left; gap: 16px;
+    }
+    .faq-q:hover { color: var(--red); }
+    .faq-arrow { font-size: 1.3rem; color: var(--gold); transition: transform 0.2s; flex-shrink: 0; }
+    .faq-q.open .faq-arrow { transform: rotate(90deg); }
+    .faq-a { display: none; padding: 0 0 18px; }
+    .faq-a.open { display: block; }
+    .faq-a p { color: var(--muted); font-size: 0.9rem; line-height: 1.8; }
+
+    /* ── NEARBY CITIES ── */
+    .nearby-cities {
+      background: var(--parchment2);
+      border-radius: 3px;
+      padding: 32px;
+      margin-top: 40px;
+    }
+    .nearby-cities h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--green-deep); margin-bottom: 16px; }
+    .city-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .city-tag {
+      background: var(--cream);
+      border: 1px solid rgba(28,58,40,0.12);
+      color: var(--green);
+      padding: 7px 14px;
+      border-radius: 2px;
+      font-size: 0.8rem; font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .city-tag:hover { background: var(--green); color: #fff; border-color: var(--green); }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 24px; }
+
+    /* Sidebar CTA form */
+    .sidebar-form {
+      background: var(--green-deep);
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+    }
+    .sidebar-form-header {
+      background: var(--red);
+      padding: 20px 24px;
+      text-align: center;
+    }
+    .sidebar-form-header .eyebrow { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 4px; display: block; }
+    .sidebar-form-header h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #fff; font-weight: 700; line-height: 1.2; }
+    .sidebar-form-body { padding: 24px; }
+    .sfg { margin-bottom: 14px; }
+    .sfg label { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 6px; }
+    .sfg input, .sfg select, .sfg textarea {
+      width: 100%; padding: 11px 13px;
+      border: 1.5px solid rgba(255,255,255,0.1);
+      border-radius: 2px;
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      font-family: 'Inter', sans-serif; font-size: 0.88rem;
+      transition: border-color 0.2s;
+    }
+    .sfg input::placeholder, .sfg textarea::placeholder { color: rgba(255,255,255,0.3); }
+    .sfg select { color: rgba(255,255,255,0.7); }
+    .sfg select option { background: var(--green-deep); color: #fff; }
+    .sfg input:focus, .sfg select:focus, .sfg textarea:focus { outline: none; border-color: var(--gold); }
+    .sfg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .sidebar-submit {
+      width: 100%; padding: 14px;
+      background: var(--gold); color: var(--green-deep);
+      border: none; border-radius: 2px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem; font-weight: 800;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      cursor: pointer; transition: background 0.2s; margin-top: 4px;
+    }
+    .sidebar-submit:hover { background: var(--gold-light); }
+    .sidebar-note { text-align: center; font-size: 0.7rem; color: rgba(255,255,255,0.3); margin-top: 10px; }
+
+    /* Sidebar contact card */
+    .sidebar-contact {
+      background: var(--cream);
+      border: 1px solid rgba(28,58,40,0.1);
+      border-radius: 3px;
+      padding: 24px;
+    }
+    .sidebar-contact h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--green-deep); margin-bottom: 16px; font-weight: 700; }
+    .contact-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .contact-icon { font-size: 1.1rem; }
+    .contact-row p { font-size: 0.83rem; color: var(--muted); line-height: 1.4; }
+    .contact-row a { color: var(--green); font-weight: 600; text-decoration: none; font-size: 0.95rem; display: block; }
+    .contact-row a:hover { text-decoration: underline; }
+
+    /* Sidebar trust block */
+    .sidebar-trust {
+      background: var(--parchment2);
+      border-radius: 3px;
+      padding: 24px;
+      border-left: 3px solid var(--gold);
+    }
+    .sidebar-trust h4 { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; font-weight: 700; }
+    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 0.83rem; color: var(--text); margin-bottom: 10px; }
+    .trust-item:last-child { margin-bottom: 0; }
+    .trust-check { color: var(--green); font-weight: 700; font-size: 0.75rem; }
+
+    /* ── RELATED PAGES ── */
+    .related-section {
+      background: var(--green-deep);
+      padding: 72px 60px;
+    }
+    .related-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; display: block; text-align: center; }
+    .related-title { font-family: 'Playfair Display', serif; font-size: 2rem; color: #fff; text-align: center; font-weight: 700; margin-bottom: 8px; }
+    .related-ornament { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 12px auto 40px; color: var(--gold); }
+    .related-ornament::before, .related-ornament::after { content: ''; display: block; width: 60px; height: 1px; background: rgba(201,160,80,0.4); }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1040px; margin: 0 auto; }
+    .related-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 3px;
+      padding: 28px 24px;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+      display: block;
+    }
+    .related-card:hover { background: rgba(255,255,255,0.09); border-color: rgba(201,160,80,0.4); transform: translateY(-3px); }
+    .related-card-icon { font-size: 1.5rem; margin-bottom: 12px; display: block; }
+    .related-card h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: #fff; font-weight: 700; margin-bottom: 8px; }
+    .related-card p { font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.6; }
+    .related-card-arrow { font-size: 0.8rem; color: var(--gold); margin-top: 14px; display: block; }
+
+    /* ── FOOTER (same as homepage) ── */
+    footer { background: #080c10; padding: 72px 60px 32px; border-top: 3px solid var(--gold); }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr; gap: 56px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .footer-brand-name { font-family: 'Playfair Display', serif; color: #fff; font-size: 1.15rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+    .footer-brand-sub { font-size: 0.65rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-brand-rule { width: 40px; height: 1px; background: var(--gold); margin-bottom: 16px; }
+    .footer-brand p { font-size: 0.83rem; color: rgba(255,255,255,0.35); line-height: 1.75; max-width: 260px; }
+    .footer-contact { margin-top: 20px; }
+    .footer-contact a { display: block; color: rgba(255,255,255,0.4); font-size: 0.82rem; text-decoration: none; margin-bottom: 7px; transition: color 0.2s; }
+    .footer-contact a:hover { color: var(--gold); }
+    .fc h4 { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 20px; font-weight: 700; }
+    .fc ul { list-style: none; }
+    .fc ul li { margin-bottom: 11px; }
+    .fc ul li a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .fc ul li a:hover { color: var(--gold-light); }
+    .footer-est { text-align: center; }
+    .footer-est-ornament { color: var(--gold); font-size: 0.7rem; display: block; letter-spacing: 0.1em; margin-bottom: 6px; }
+    .footer-est-year { font-family: 'Playfair Display', serif; font-size: 2.4rem; color: #fff; line-height: 1; border: 1px solid rgba(201,160,80,0.3); padding: 16px 24px; display: inline-block; }
+    .footer-est-label { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-top: 8px; display: block; }
+    .footer-bottom { padding-top: 28px; display: flex; justify-content: space-between; align-items: center; font-size: 0.77rem; color: rgba(255,255,255,0.2); flex-wrap: wrap; gap: 10px; }
+    .footer-family a { color: rgba(255,255,255,0.3); text-decoration: none; }
+    .footer-family a:hover { color: var(--gold); }
+
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; }
+      .breadcrumb { padding: 10px 20px; }
+      .page-hero-content { padding: 40px 24px; }
+      .page-body { grid-template-columns: 1fr; padding: 48px 24px; gap: 40px; }
+      .sidebar { position: static; }
+      .service-types { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+      footer { padding: 48px 24px 24px; }
+      .related-section { padding: 56px 24px; }
+      .photo-pair { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <span class="logo-est">Est. 1972</span>
+    <span class="logo-name">Santa Claus &amp; Company</span>
+    <span class="logo-rule">Arizona</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#">Services</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Reviews</a></li>
+    <li><a href="#book" class="nav-cta">Book Santa</a></li>
+  </ul>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="breadcrumb-sep">›</span>
+  <a href="#">Locations</a>
+  <span class="breadcrumb-sep">›</span>
+  <span class="breadcrumb-current">Phoenix, Arizona</span>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Santa Claus for Hire · Phoenix, AZ</span>
+    </div>
+    <h1>Professional Santa Claus<br />Rentals in Phoenix, Arizona</h1>
+    <p class="page-hero-sub">Serving Greater Phoenix since 1972 — home visits, corporate events, malls, parades & more. The most trusted name in Santa entertainment.</p>
+  </div>
+</section>
+
+<!-- PAGE BODY -->
+<div class="page-body">
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <h2>The #1 Santa Claus Company in Phoenix, AZ</h2>
+    <div class="section-ornament-left"><span style="color:var(--gold)">✦</span></div>
+
+    <p>When Phoenix families and businesses want a <strong>real, professional Santa Claus</strong>, they call Santa Claus and Company. Founded in Arizona in 1972, we are the longest-running Santa Claus staffing agency in the United States — and Phoenix has been at the heart of our work for over 50 years.</p>
+
+    <p>Every Santa in our network is personally vetted, background-checked, and experienced in delivering an authentic, memorable experience. Whether you need Santa for an intimate home visit on Christmas Eve or a large-scale corporate holiday party in downtown Phoenix, we have the right Santa for your event.</p>
+
+    <div class="feature-photo">
+      <img src="https://www.hiresanta.com/wp-content/uploads/2022/10/family-events.jpg" alt="Santa Claus home visit in Phoenix Arizona" />
+      <div class="feature-photo-caption">A Santa Claus and Company entertainer at a Phoenix home visit</div>
+    </div>
+
+    <h3>Santa Services Available in Phoenix</h3>
+    <p>We offer a full range of Santa Claus entertainment options throughout the Greater Phoenix area, including Scottsdale, Tempe, Mesa, Chandler, Gilbert, and beyond.</p>
+
+    <div class="service-types">
+      <div class="stype"><span class="stype-icon">🏠</span><h4>Home Visits</h4><p>Santa arrives at your door, in character, for an unforgettable family experience.</p></div>
+      <div class="stype"><span class="stype-icon">🏢</span><h4>Corporate Events</h4><p>Holiday parties, client events, and employee celebrations across Phoenix.</p></div>
+      <div class="stype"><span class="stype-icon">🛍️</span><h4>Mall &amp; Retail</h4><p>Drive foot traffic with a professional Santa experience shoppers remember.</p></div>
+      <div class="stype"><span class="stype-icon">🎉</span><h4>Parades &amp; Tree Lightings</h4><p>Grand appearances at community events and city tree lighting ceremonies.</p></div>
+      <div class="stype"><span class="stype-icon">🏫</span><h4>Schools &amp; Daycares</h4><p>Safe, vetted Santa visits for students of all ages across the Valley.</p></div>
+      <div class="stype"><span class="stype-icon">💛</span><h4>Charity Events</h4><p>Bringing the spirit of giving to nonprofits and community organizations.</p></div>
+    </div>
+
+    <h3>Why Phoenix Trusts Santa Claus and Company</h3>
+
+    <ul class="why-list">
+      <li>
+        <div class="why-icon">🏆</div>
+        <div><strong>Over 50 Years of Experience</strong>Founded in Arizona in 1972, we have more history and local knowledge than any other Santa agency in Phoenix.</div>
+      </li>
+      <li>
+        <div class="why-icon">✅</div>
+        <div><strong>Fully Vetted &amp; Background-Checked</strong>Every Santa is personally screened before joining our roster. Your event and your family are safe with us.</div>
+      </li>
+      <li>
+        <div class="why-icon">🎭</div>
+        <div><strong>Authentic, In-Character Performers</strong>Our Santas don't just wear a suit — they live the role. Professional, warm, and genuinely magical.</div>
+      </li>
+      <li>
+        <div class="why-icon">📋</div>
+        <div><strong>Seamless Booking Process</strong>From your first inquiry to Santa's arrival, we handle everything. No surprises, no hassle.</div>
+      </li>
+      <li>
+        <div class="why-icon">⭐</div>
+        <div><strong>5-Star Track Record</strong>Hundreds of Phoenix families and businesses have trusted us with their most important holiday moments.</div>
+      </li>
+    </ul>
+
+    <div class="photo-pair">
+      <img src="https://santaclausandcompany.com/wp-content/uploads/2022/10/Cards-Joe-Aiello-Low-Res-274x300.jpg" alt="Professional Santa Claus entertainer" />
+      <img src="https://santaclausandcompany.com/wp-content/uploads/2022/10/Cards-Mark-DeMonbrun-2.jpg" alt="Real bearded Santa Claus for hire" />
+    </div>
+
+    <!-- FAQ SECTION -->
+    <h3>Frequently Asked Questions — Phoenix</h3>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How far in advance should I book a Santa in Phoenix?
+          <span class="faq-arrow">›</span>
+        </button>
+        <div class="faq-a">
+          <p>We recommend booking at least 4–6 weeks before your event, especially for December dates. Phoenix is a large market and our most popular Santas fill up fast. That said, we do accommodate last-minute requests when availability allows — call us directly for urgent bookings.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do you serve Scottsdale, Mesa, and other cities in the Phoenix metro?
+          <span class="faq-arrow">›</span>
+        </button>
+        <div class="faq-a">
+          <p>Yes. We serve the entire Greater Phoenix area including Scottsdale, Tempe, Mesa, Chandler, Gilbert, Glendale, Peoria, Avondale, Goodyear, Anthem, Cave Creek, and Queen Creek. Travel fees may apply for locations beyond a certain radius.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Are your Phoenix Santas background-checked?
+          <span class="faq-arrow">›</span>
+        </button>
+        <div class="faq-a">
+          <p>Absolutely. Every Santa in our network undergoes a thorough background check before joining our roster. We've maintained this standard since 1972 because your family's safety is non-negotiable.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>Serving All of Greater Phoenix</h3>
+    <p>Our Santas are available throughout the entire Phoenix metro area. No matter where your event is located, we can help. We regularly serve clients in:</p>
+
+    <div class="nearby-cities">
+      <h3>Also Serving Nearby Cities</h3>
+      <div class="city-tags">
+        <a href="#" class="city-tag">Scottsdale</a>
+        <a href="#" class="city-tag">Tempe</a>
+        <a href="#" class="city-tag">Mesa</a>
+        <a href="#" class="city-tag">Chandler</a>
+        <a href="#" class="city-tag">Gilbert</a>
+        <a href="#" class="city-tag">Glendale</a>
+        <a href="#" class="city-tag">Peoria</a>
+        <a href="#" class="city-tag">Avondale</a>
+        <a href="#" class="city-tag">Goodyear</a>
+        <a href="#" class="city-tag">Anthem</a>
+        <a href="#" class="city-tag">Cave Creek</a>
+        <a href="#" class="city-tag">Queen Creek</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="book">
+
+    <!-- LEAD FORM -->
+    <div class="sidebar-form">
+      <div class="sidebar-form-header">
+        <span class="eyebrow">Request a Quote</span>
+        <h3>Book a Santa in Phoenix, AZ</h3>
+      </div>
+      <div class="sidebar-form-body">
+        <!-- [gravityforms id="X"] replaces below -->
+        <div class="sfg sfg-row">
+          <div><label>First Name</label><input type="text" placeholder="Jane" /></div>
+          <div><label>Last Name</label><input type="text" placeholder="Smith" /></div>
+        </div>
+        <div class="sfg"><label>Email</label><input type="email" placeholder="jane@example.com" /></div>
+        <div class="sfg"><label>Phone</label><input type="tel" placeholder="(602) 555-0100" /></div>
+        <div class="sfg sfg-row">
+          <div><label>Event Date</label><input type="date" /></div>
+          <div><label>Event Type</label>
+            <select>
+              <option value="">Type...</option>
+              <option>Home Visit</option>
+              <option>Corporate</option>
+              <option>Mall / Retail</option>
+              <option>Parade</option>
+              <option>School</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="sfg"><label>Message</label><textarea rows="3" placeholder="Tell us about your event..."></textarea></div>
+        <button class="sidebar-submit">Request a Quote →</button>
+        <p class="sidebar-note">🔒 Private &amp; secure. No spam.</p>
+      </div>
+    </div>
+
+    <!-- CONTACT CARD -->
+    <div class="sidebar-contact">
+      <h4>Have Questions?</h4>
+      <div class="contact-row">
+        <span class="contact-icon">📞</span>
+        <div>
+          <p>Call us directly</p>
+          <a href="tel:6029548697">(602) 954-8697</a>
+        </div>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon">✉️</span>
+        <div>
+          <p>Email us</p>
+          <a href="mailto:santa@santaclausandcompany.com" style="font-size:0.8rem;">santa@santaclausandcompany.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRUST BLOCK -->
+    <div class="sidebar-trust">
+      <h4>Why Book With Us</h4>
+      <div class="trust-item"><span class="trust-check">✓</span> In business since 1972</div>
+      <div class="trust-item"><span class="trust-check">✓</span> All Santas background-checked</div>
+      <div class="trust-item"><span class="trust-check">✓</span> Professional &amp; in-character</div>
+      <div class="trust-item"><span class="trust-check">✓</span> Fast 24-hr response</div>
+      <div class="trust-item"><span class="trust-check">✓</span> 5-star rated service</div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- RELATED PAGES -->
+<section class="related-section">
+  <span class="related-eyebrow">More From Santa Claus &amp; Company</span>
+  <h2 class="related-title">Explore Our Services</h2>
+  <div class="related-ornament"><span>✦</span></div>
+  <div class="related-grid">
+    <a href="#" class="related-card">
+      <span class="related-card-icon">🏠</span>
+      <h4>Home Visits</h4>
+      <p>Santa at your door — the most personal, magical experience for your family.</p>
+      <span class="related-card-arrow">Learn More →</span>
+    </a>
+    <a href="#" class="related-card">
+      <span class="related-card-icon">🏢</span>
+      <h4>Corporate Events</h4>
+      <p>Professional Santa entertainment for holiday parties and corporate events.</p>
+      <span class="related-card-arrow">Learn More →</span>
+    </a>
+    <a href="#" class="related-card">
+      <span class="related-card-icon">📍</span>
+      <h4>All Arizona Locations</h4>
+      <p>We serve Phoenix, Scottsdale, Tucson, Mesa, Tempe and cities across Arizona.</p>
+      <span class="related-card-arrow">View Locations →</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Santa Claus &amp; Company</div>
+      <div class="footer-brand-sub">Est. 1972 &nbsp;·&nbsp; Arizona</div>
+      <div class="footer-brand-rule"></div>
+      <p>Arizona's original Santa Claus staffing agency. Connecting families and businesses with exceptional, vetted Santas since 1972.</p>
+      <div class="footer-contact">
+        <a href="tel:6029548697">📞 (602) 954-8697</a>
+        <a href="mailto:santa@santaclausandcompany.com">✉ santa@santaclausandcompany.com</a>
+      </div>
+    </div>
+    <div class="fc">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Home Visits</a></li>
+        <li><a href="#">Corporate Events</a></li>
+        <li><a href="#">Mall &amp; Retail</a></li>
+        <li><a href="#">Parades</a></li>
+        <li><a href="#">Schools &amp; Daycares</a></li>
+        <li><a href="#">Charity Events</a></li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Book Santa</a></li>
+        <li><a href="#">Rates &amp; Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-est">
+      <span class="footer-est-ornament">✦ &nbsp; Since &nbsp; ✦</span>
+      <div class="footer-est-year">EST.<br />1972</div>
+      <span class="footer-est-label">Arizona's Original Santa Agency</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Santa Claus and Company. All rights reserved.</span>
+    <span class="footer-family">Part of the <a href="https://www.hiresanta.com" target="_blank">HireSanta.com</a> family.</span>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    // close all
+    document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('open'); b.nextElementSibling.classList.remove('open'); });
+    // open clicked if it was closed
+    if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santa Claus and Company — Since 1972</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:      #1c3a28;
+      --green-mid:  #244d34;
+      --green-deep: #152d1f;
+      --red:        #8b2020;
+      --red-bright: #a52828;
+      --gold:       #c9a050;
+      --gold-light: #e2c07a;
+      --parchment:  #f7f1e6;
+      --parchment2: #efe8d8;
+      --cream:      #fdfaf5;
+      --text:       #1a1a1a;
+      --muted:      #5a5a5a;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--parchment); overflow-x: hidden; }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--green-deep);
+      border-bottom: 2px solid var(--gold);
+      padding: 0 60px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .logo-wrap {
+      display: flex; flex-direction: column; align-items: center;
+      text-decoration: none; gap: 1px;
+    }
+    .logo-est { font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+    .logo-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; color: #fff; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600;
+    }
+    .logo-rule {
+      display: flex; align-items: center; gap: 6px;
+      color: var(--gold); font-size: 0.6rem; letter-spacing: 0.2em;
+    }
+    .logo-rule::before, .logo-rule::after { content: '—'; }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.83rem; font-weight: 500; letter-spacing: 0.04em; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-cta {
+      background: var(--red) !important;
+      color: #fff !important;
+      padding: 10px 24px;
+      border-radius: 2px;
+      font-weight: 600 !important;
+      letter-spacing: 0.06em !important;
+      text-transform: uppercase;
+      font-size: 0.76rem !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--red-bright) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex; align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('https://www.hiresanta.com/wp-content/uploads/2018/11/edited-santa.jpg') center top/cover no-repeat;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(100deg, rgba(21,45,31,0.92) 40%, rgba(21,45,31,0.55) 70%, transparent 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 680px;
+      padding: 100px 80px;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      border: 1px solid rgba(201,160,80,0.5);
+      color: var(--gold-light);
+      font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      padding: 7px 18px; border-radius: 2px;
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 5.5vw, 4.4rem);
+      color: #fff; line-height: 1.1; font-weight: 700;
+      margin-bottom: 22px;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem; font-style: italic;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 36px; font-weight: 400;
+    }
+    .hero-divider { width: 48px; height: 2px; background: var(--gold); margin: 0 0 36px 0; }
+    .hero-sub {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.95rem; line-height: 1.8;
+      margin-bottom: 44px; max-width: 500px; font-weight: 300;
+    }
+    .hero-btns { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .btn-red {
+      background: var(--red);
+      color: #fff;
+      text-decoration: none;
+      padding: 16px 36px;
+      font-size: 0.82rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+    .btn-red:hover { background: var(--red-bright); transform: translateY(-1px); }
+    .btn-outline {
+      border: 1.5px solid rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      padding: 15px 30px;
+      font-size: 0.82rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      border-radius: 2px;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── TRUST STRIP ── */
+    .trust-strip {
+      background: var(--green);
+      border-bottom: 1px solid rgba(201,160,80,0.2);
+      padding: 22px 60px;
+      display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 10px;
+      color: rgba(255,255,255,0.7); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em;
+    }
+    .trust-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); display: inline-block; }
+
+    /* ── SECTION WRAPPER ── */
+    .section-wrap { max-width: 1160px; margin: 0 auto; }
+
+    /* ── SERVICES ── */
+    .services-section {
+      background: var(--parchment);
+      padding: 100px 60px;
+      text-align: center;
+    }
+    .section-eyebrow {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.25em;
+      text-transform: uppercase; color: var(--red);
+      margin-bottom: 10px; display: block;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      color: var(--green-deep); font-weight: 700;
+      margin-bottom: 12px; line-height: 1.15;
+    }
+    .section-ornament {
+      display: flex; align-items: center; justify-content: center;
+      gap: 12px; margin: 16px auto 48px;
+      color: var(--gold);
+    }
+    .section-ornament::before, .section-ornament::after {
+      content: ''; display: block; width: 60px; height: 1px; background: var(--gold);
+    }
+    .section-ornament span { font-size: 0.7rem; }
+    .svc-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 0;
+    }
+    .svc-card {
+      border: 1px solid rgba(28,58,40,0.12);
+      border-radius: 3px;
+      padding: 40px 28px;
+      background: var(--cream);
+      transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+      text-align: left;
+    }
+    .svc-card:hover {
+      box-shadow: 0 8px 32px rgba(28,58,40,0.1);
+      transform: translateY(-4px);
+      border-color: var(--gold);
+    }
+    .svc-icon-wrap {
+      width: 52px; height: 52px;
+      border: 1.5px solid var(--red);
+      border-radius: 2px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+    }
+    .svc-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.85rem; color: var(--green-deep);
+      font-weight: 700; margin-bottom: 10px;
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .svc-card p { color: var(--muted); font-size: 0.87rem; line-height: 1.7; }
+
+    /* ── SPLIT ABOUT ── */
+    .about-section {
+      display: grid; grid-template-columns: 1fr 1fr;
+    }
+    .about-photo-side {
+      position: relative; overflow: hidden; min-height: 600px;
+    }
+    .about-photo-bg {
+      position: absolute; inset: 0;
+      background: url('https://www.hiresanta.com/wp-content/uploads/2019/01/hire-santa-claus-2.jpg') center top/cover no-repeat;
+    }
+    .about-photo-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, transparent 60%, var(--parchment2));
+    }
+    .about-stamp {
+      position: absolute; bottom: 48px; left: 48px;
+      background: var(--green-deep);
+      border: 1px solid var(--gold);
+      padding: 20px 28px;
+      text-align: center;
+    }
+    .stamp-year { font-family: 'Playfair Display', serif; font-size: 2.6rem; color: var(--gold); line-height: 1; display: block; }
+    .stamp-text { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-top: 6px; display: block; }
+    .about-text-side {
+      background: var(--parchment2);
+      padding: 90px 64px; display: flex; flex-direction: column; justify-content: center;
+    }
+    .about-text-side p {
+      color: var(--muted); font-size: 0.93rem; line-height: 1.85;
+      margin-bottom: 18px;
+    }
+    .about-text-side p:last-of-type { margin-bottom: 32px; }
+    .about-stats { display: flex; gap: 36px; margin: 28px 0 32px; }
+    .stat { text-align: center; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2.4rem; color: var(--red); line-height: 1; }
+    .stat-lbl { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; font-weight: 600; }
+    .hs-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(28,58,40,0.07); border-radius: 2px;
+      padding: 10px 16px; font-size: 0.8rem; color: var(--muted);
+      border-left: 3px solid var(--green);
+    }
+    .hs-badge a { color: var(--green); font-weight: 600; text-decoration: none; }
+    .hs-badge a:hover { text-decoration: underline; }
+
+    /* ── HOW IT WORKS ── */
+    .how-section {
+      background: var(--green);
+      padding: 100px 60px;
+    }
+    .how-section .section-eyebrow { color: var(--gold-light); }
+    .how-section .section-title { color: #fff; }
+    .how-section .section-ornament { color: var(--gold); }
+    .how-section .section-ornament::before,
+    .how-section .section-ornament::after { background: rgba(201,160,80,0.4); }
+    .how-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 2px; background: rgba(255,255,255,0.06);
+      margin-top: 56px;
+    }
+    .how-step {
+      background: var(--green);
+      padding: 48px 36px;
+      text-align: center;
+      transition: background 0.2s;
+    }
+    .how-step:hover { background: var(--green-mid); }
+    .how-num {
+      width: 52px; height: 52px;
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; color: var(--gold);
+    }
+    .how-step h3 { color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 12px; letter-spacing: 0.03em; }
+    .how-step p { color: rgba(255,255,255,0.5); font-size: 0.85rem; line-height: 1.7; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section {
+      background: var(--parchment);
+      padding: 100px 60px;
+    }
+    .t-layout {
+      display: grid; grid-template-columns: 1fr 1.1fr 1fr;
+      gap: 36px; align-items: center;
+      margin-top: 56px;
+    }
+    .t-card {
+      background: var(--cream);
+      border: 1px solid rgba(28,58,40,0.1);
+      border-radius: 3px;
+      padding: 40px 32px;
+    }
+    .t-open-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem; color: var(--gold);
+      line-height: 0.6; margin-bottom: 20px; display: block;
+    }
+    .t-card p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; color: var(--text);
+      line-height: 1.7; font-style: italic;
+      margin-bottom: 20px;
+    }
+    .t-author { font-size: 0.8rem; color: var(--muted); font-weight: 600; letter-spacing: 0.04em; }
+    .t-author span { display: block; font-weight: 400; color: #999; margin-top: 2px; }
+    .t-stars { color: var(--gold); font-size: 0.85rem; letter-spacing: 3px; margin-bottom: 16px; }
+    .t-center-photo {
+      border-radius: 3px; overflow: hidden;
+      aspect-ratio: 3/4;
+      background: url('https://santaclausandcompany.com/wp-content/uploads/2022/10/Cards-Mark-DeMonbrun-2.jpg') center top/cover;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    }
+
+    /* ── PHOTO GALLERY ── */
+    .gallery-section {
+      background: var(--green-deep);
+      padding: 80px 60px;
+    }
+    .gallery-section .section-eyebrow { color: var(--gold-light); }
+    .gallery-section .section-title { color: #fff; text-align: center; }
+    .gallery-ornament { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 16px auto 48px; color: var(--gold); }
+    .gallery-ornament::before, .gallery-ornament::after { content: ''; display: block; width: 60px; height: 1px; background: rgba(201,160,80,0.4); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      grid-template-rows: 280px 280px;
+      gap: 10px;
+    }
+    .gallery-item {
+      background-size: cover;
+      background-position: center top;
+      border-radius: 3px;
+      overflow: hidden;
+      position: relative;
+    }
+    .gallery-item.tall { grid-row: span 2; }
+    .gallery-item::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(21,45,31,0.7) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .gallery-item:hover::after { opacity: 1; }
+
+    /* ── LEAD FORM ── */
+    .form-section {
+      background: var(--green-deep);
+      padding: 100px 60px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: start;
+      max-width: 100%;
+    }
+    .form-copy .section-eyebrow { color: var(--gold-light); }
+    .form-copy .section-title { color: #fff; font-size: 2.2rem; text-align: left; }
+    .form-copy .section-ornament { justify-content: flex-start; margin-left: 0; }
+    .form-copy .section-ornament::before { display: none; }
+    .form-copy p { color: rgba(255,255,255,0.55); font-size: 0.93rem; line-height: 1.8; margin-bottom: 32px; }
+    .form-trust { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .form-trust li { display: flex; align-items: center; gap: 12px; font-size: 0.87rem; color: rgba(255,255,255,0.65); }
+    .form-trust li::before {
+      content: '✓';
+      width: 20px; height: 20px; min-width: 20px;
+      background: var(--gold); color: var(--green-deep);
+      border-radius: 50%; font-size: 0.65rem; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .form-box {
+      background: var(--parchment);
+      border-radius: 3px;
+      padding: 48px 44px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+    }
+    .form-box-header {
+      text-align: center; margin-bottom: 32px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(28,58,40,0.12);
+    }
+    .form-box-header .eyebrow { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); font-weight: 700; margin-bottom: 8px; display: block; }
+    .form-box-header h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem; color: var(--green-deep); font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.04em; line-height: 1.2;
+    }
+    .fg { margin-bottom: 16px; }
+    .fg label { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 7px; }
+    .fg input, .fg select, .fg textarea {
+      width: 100%; padding: 12px 14px;
+      border: 1.5px solid rgba(28,58,40,0.15);
+      border-radius: 2px;
+      font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--text);
+      background: var(--cream); transition: border-color 0.2s;
+    }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { outline: none; border-color: var(--green); }
+    .fg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .form-submit {
+      width: 100%; padding: 15px;
+      background: var(--red); color: #fff; border: none;
+      border-radius: 2px; font-family: 'Inter', sans-serif;
+      font-size: 0.8rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      cursor: pointer; margin-top: 8px; transition: background 0.2s;
+    }
+    .form-submit:hover { background: var(--red-bright); }
+    .form-footnote { text-align: center; font-size: 0.73rem; color: #aaa; margin-top: 10px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--green-deep);
+      padding: 72px 60px 32px;
+      border-top: 3px solid var(--gold);
+    }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 56px; padding-bottom: 56px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .footer-brand-name {
+      font-family: 'Playfair Display', serif;
+      color: #fff; font-size: 1.15rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+    .footer-brand-sub { font-size: 0.65rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-brand-rule { width: 40px; height: 1px; background: var(--gold); margin-bottom: 16px; }
+    .footer-brand p { font-size: 0.83rem; color: rgba(255,255,255,0.35); line-height: 1.75; max-width: 260px; }
+    .footer-contact { margin-top: 20px; }
+    .footer-contact a { display: block; color: rgba(255,255,255,0.4); font-size: 0.82rem; text-decoration: none; margin-bottom: 7px; transition: color 0.2s; }
+    .footer-contact a:hover { color: var(--gold); }
+    .fc h4 { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 20px; font-weight: 700; }
+    .fc ul { list-style: none; }
+    .fc ul li { margin-bottom: 11px; }
+    .fc ul li a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .fc ul li a:hover { color: var(--gold-light); }
+    .footer-est {
+      text-align: center;
+    }
+    .footer-est-ornament { color: var(--gold); font-size: 0.7rem; display: block; letter-spacing: 0.1em; margin-bottom: 6px; }
+    .footer-est-year {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem; color: #fff;
+      line-height: 1; border: 1px solid rgba(201,160,80,0.3);
+      padding: 16px 24px; display: inline-block;
+    }
+    .footer-est-label { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-top: 8px; display: block; }
+    .footer-bottom {
+      padding-top: 28px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.77rem; color: rgba(255,255,255,0.2); flex-wrap: wrap; gap: 10px;
+    }
+    .footer-family a { color: rgba(255,255,255,0.3); text-decoration: none; }
+    .footer-family a:hover { color: var(--gold); }
+
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; }
+      .nav-links li:not(:last-child) { display: none; }
+      .hero-content { padding: 80px 24px; }
+      .trust-strip { padding: 16px 24px; gap: 20px; }
+      .services-section, .how-section, .testimonials-section { padding: 72px 24px; }
+      .svc-grid { grid-template-columns: 1fr 1fr; }
+      .about-section { grid-template-columns: 1fr; }
+      .about-photo-side { min-height: 320px; }
+      .about-text-side { padding: 56px 28px; }
+      .how-grid { grid-template-columns: 1fr 1fr; }
+      .t-layout { grid-template-columns: 1fr; }
+      .t-center-photo { aspect-ratio: 16/9; max-height: 300px; }
+      .form-section { grid-template-columns: 1fr; padding: 72px 24px; gap: 48px; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+      footer { padding: 48px 24px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo-wrap">
+    <span class="logo-est">Est. 1972</span>
+    <span class="logo-name">Santa Claus &amp; Company</span>
+    <span class="logo-rule">Arizona</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#book" class="nav-cta">Book Santa</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">⭐ &nbsp; America's Oldest Santa Staffing Agency</div>
+    <h1>Leaders in Santa Claus<br />Staffing <span>Since 1972.</span></h1>
+    <p class="hero-tagline">Legacy, Trust, and Magic.</p>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">Santa Claus and Company has been connecting families and organizations with exceptional, fully vetted Santa Claus entertainers for over 50 years — in Arizona and across the nation.</p>
+    <div class="hero-btns">
+      <a href="#book" class="btn-red">Book Your Santa Now</a>
+      <a href="tel:6029548697" class="btn-outline">(602) 954-8697</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-item"><span class="trust-dot"></span>50+ Years in Business</div>
+  <div class="trust-item"><span class="trust-dot"></span>Fully Background-Checked Santas</div>
+  <div class="trust-item"><span class="trust-dot"></span>Corporate &amp; Private Events</div>
+  <div class="trust-item"><span class="trust-dot"></span>Arizona &amp; Nationwide</div>
+  <div class="trust-item"><span class="trust-dot"></span>5-Star Rated</div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="section-wrap">
+    <span class="section-eyebrow">What We Offer</span>
+    <h2 class="section-title">Our Services</h2>
+    <div class="section-ornament"><span>✦</span></div>
+    <div class="svc-grid">
+      <div class="svc-card"><div class="svc-icon-wrap">🏠</div><h3>Home Visits</h3><p>Santa arrives at your home in full character — a personal, magical experience your family will never forget.</p></div>
+      <div class="svc-card"><div class="svc-icon-wrap">🏢</div><h3>Corporate Events</h3><p>Bring the holiday spirit to your company party or client event with a professional Santa who commands the room.</p></div>
+      <div class="svc-card"><div class="svc-icon-wrap">🛍️</div><h3>Mall &amp; Retail</h3><p>Drive foot traffic and create shareable holiday moments that shoppers talk about for years.</p></div>
+      <div class="svc-card"><div class="svc-icon-wrap">🎉</div><h3>Parades &amp; Appearances</h3><p>From grand entrances to tree lightings and community parades, we deliver the moment every time.</p></div>
+      <div class="svc-card"><div class="svc-icon-wrap">🏫</div><h3>Schools &amp; Daycares</h3><p>Safe, vetted, age-appropriate Santa visits that light up students and staff from the first ho-ho-ho.</p></div>
+      <div class="svc-card"><div class="svc-icon-wrap">💛</div><h3>Charity &amp; Nonprofit</h3><p>We partner with nonprofits to spread the spirit of giving — Santa appearances that warm every heart in the room.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<div class="about-section" id="about">
+  <div class="about-photo-side">
+    <div class="about-photo-bg"></div>
+    <div class="about-photo-overlay"></div>
+    <div class="about-stamp">
+      <span class="stamp-year">1972</span>
+      <span class="stamp-text">Founded in Arizona</span>
+    </div>
+  </div>
+  <div class="about-text-side">
+    <span class="section-eyebrow">Our Story</span>
+    <h2 class="section-title" style="text-align:left;">The Original.<br />Still the Best.</h2>
+    <div class="section-ornament" style="justify-content:flex-start; margin-left:0;"><span style="color:var(--gold)">✦</span></div>
+    <p>Founded in Arizona in 1972, Santa Claus and Company is the longest-running Santa Claus staffing agency in the United States. For over five decades, we have been the trusted name that families and businesses return to, year after year.</p>
+    <p>Every Santa in our network is personally screened, background-checked, and trained to deliver a genuinely authentic experience — whether it's a child's very first Santa visit or a Fortune 500 holiday gala.</p>
+    <p>We don't just staff Santas. <strong>We protect the magic.</strong></p>
+    <div class="about-stats">
+      <div class="stat"><div class="stat-num">50+</div><div class="stat-lbl">Years</div></div>
+      <div class="stat"><div class="stat-num">1,000s</div><div class="stat-lbl">Events</div></div>
+      <div class="stat"><div class="stat-num">5★</div><div class="stat-lbl">Rated</div></div>
+    </div>
+    <div class="hs-badge">Proudly part of the <a href="https://www.hiresanta.com" target="_blank">HireSanta.com</a> family of companies.</div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="section-wrap" style="text-align:center;">
+    <span class="section-eyebrow">Simple Process</span>
+    <h2 class="section-title">How Booking Works</h2>
+    <div class="section-ornament"><span>✦</span></div>
+    <div class="how-grid">
+      <div class="how-step"><div class="how-num">1</div><h3>Submit Your Request</h3><p>Tell us about your event — date, type, location, and any special needs.</p></div>
+      <div class="how-step"><div class="how-num">2</div><h3>We Match Your Santa</h3><p>Our team selects the best available Santa from our fully vetted roster.</p></div>
+      <div class="how-step"><div class="how-num">3</div><h3>Confirm &amp; Book</h3><p>We send you clear pricing and lock in your date once you're ready.</p></div>
+      <div class="how-step"><div class="how-num">4</div><h3>Santa Arrives</h3><p>On time, in character, ready to deliver. Your only job is to enjoy the moment.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section class="gallery-section">
+  <div class="section-wrap" style="text-align:center;">
+    <span class="section-eyebrow">Our Santas</span>
+    <h2 class="section-title">Real. Professional. Unforgettable.</h2>
+    <div class="gallery-ornament"><span>✦</span></div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall" style="background-image:url('https://santaclausandcompany.com/wp-content/uploads/2022/10/HireSanta-Real-Santa-Claus-small.jpg');"></div>
+      <div class="gallery-item" style="background-image:url('https://www.hiresanta.com/wp-content/uploads/2022/10/family-events.jpg');"></div>
+      <div class="gallery-item" style="background-image:url('https://www.hiresanta.com/wp-content/uploads/2022/10/mall-retail.jpg');"></div>
+      <div class="gallery-item" style="background-image:url('https://santaclausandcompany.com/wp-content/uploads/2022/10/Cards-Joe-Aiello-Low-Res-274x300.jpg'); background-position: center center;"></div>
+      <div class="gallery-item" style="background-image:url('https://www.hiresanta.com/wp-content/uploads/2022/10/corporate-events.jpg');"></div>
+      <div class="gallery-item" style="background-image:url('https://www.hiresanta.com/wp-content/uploads/2022/10/talent-agency.jpg');"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section" id="testimonials">
+  <div class="section-wrap" style="text-align:center;">
+    <span class="section-eyebrow">Client Reviews</span>
+    <h2 class="section-title">Testimonials</h2>
+    <div class="section-ornament"><span>✦</span></div>
+    <div class="t-layout">
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <span class="t-open-quote">"</span>
+        <p>Our Santa knew every child's name, stayed in character the entire time, and had parents in tears of joy. I can't overstate how magical it was.</p>
+        <div class="t-author">Jennifer M. <span>Scottsdale, AZ &nbsp;·&nbsp; Home Visit</span></div>
+      </div>
+      <div class="t-center-photo"></div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <span class="t-open-quote">"</span>
+        <p>Three years in a row for our corporate party. Professional, reliable, and the team absolutely loves it. Santa Claus and Company delivers every single time.</p>
+        <div class="t-author">David K. <span>Phoenix, AZ &nbsp;·&nbsp; Corporate Event</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD FORM -->
+<section class="form-section" id="book">
+  <div class="form-copy">
+    <span class="section-eyebrow">Get a Quote</span>
+    <h2 class="section-title">Ready for an Unforgettable Experience?<br />Book a Professional Santa.</h2>
+    <div class="section-ornament" style="justify-content:flex-start; margin-left:0;"><span style="color:var(--gold)">✦</span></div>
+    <p>Fill out the form and our team will respond within one business day with availability and pricing. No commitment required.</p>
+    <ul class="form-trust">
+      <li>Over 50 years of trust and experience</li>
+      <li>Every Santa fully vetted &amp; background-checked</li>
+      <li>Transparent pricing — no hidden fees</li>
+      <li>Available statewide and select national events</li>
+      <li>Fast response — usually within 24 hours</li>
+    </ul>
+  </div>
+  <div class="form-box">
+    <div class="form-box-header">
+      <span class="eyebrow">Request a Quote</span>
+      <h3>Book a Professional Santa</h3>
+    </div>
+    <!-- [gravityforms id="X"] replaces below -->
+    <div class="fg fg-row">
+      <div><label>First Name</label><input type="text" placeholder="Jane" /></div>
+      <div><label>Last Name</label><input type="text" placeholder="Smith" /></div>
+    </div>
+    <div class="fg"><label>Email Address</label><input type="email" placeholder="jane@example.com" /></div>
+    <div class="fg"><label>Phone Number</label><input type="tel" placeholder="(602) 555-0100" /></div>
+    <div class="fg fg-row">
+      <div><label>Event Date</label><input type="date" /></div>
+      <div><label>Event Location</label><input type="text" placeholder="Phoenix, AZ" /></div>
+    </div>
+    <div class="fg fg-row">
+      <div><label>Number of Guests</label><input type="text" placeholder="~50" /></div>
+      <div>
+        <label>Event Type</label>
+        <select>
+          <option value="">Select type...</option>
+          <option>Home Visit</option>
+          <option>Corporate Event</option>
+          <option>Mall / Retail</option>
+          <option>Parade / Appearance</option>
+          <option>School / Daycare</option>
+          <option>Charity / Nonprofit</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="fg"><label>Message / Special Requests</label><textarea rows="3" placeholder="Tell us anything helpful about your event..."></textarea></div>
+    <button class="form-submit">Request a Quote →</button>
+    <p class="form-footnote">🔒 Your information is private and secure. No spam.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Santa Claus &amp; Company</div>
+      <div class="footer-brand-sub">Est. 1972 &nbsp;·&nbsp; Arizona</div>
+      <div class="footer-brand-rule"></div>
+      <p>Arizona's original Santa Claus staffing agency. Connecting families and businesses with exceptional, vetted Santas since 1972.</p>
+      <div class="footer-contact">
+        <a href="tel:6029548697">📞 (602) 954-8697</a>
+        <a href="mailto:santa@santaclausandcompany.com">✉ santa@santaclausandcompany.com</a>
+      </div>
+    </div>
+    <div class="fc">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Home Visits</a></li>
+        <li><a href="#">Corporate Events</a></li>
+        <li><a href="#">Mall &amp; Retail</a></li>
+        <li><a href="#">Parades</a></li>
+        <li><a href="#">Schools &amp; Daycares</a></li>
+        <li><a href="#">Charity Events</a></li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Book Santa</a></li>
+        <li><a href="#">Rates &amp; Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-est">
+      <span class="footer-est-ornament">✦ &nbsp; Since &nbsp; ✦</span>
+      <div class="footer-est-year">EST.<br />1972</div>
+      <span class="footer-est-label">Arizona's Original Santa Agency</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Santa Claus and Company. All rights reserved.</span>
+    <span class="footer-family">Part of the <a href="https://www.hiresanta.com" target="_blank">HireSanta.com</a> family of companies.</span>
+  </div>
+</footer>
+
+</body>
+</html>

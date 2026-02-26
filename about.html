@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Santa Claus and Company — The Original Since 1972</title>
+  <meta name="description" content="Santa Claus and Company is America's oldest Santa Claus staffing agency, founded in Arizona in 1972. Learn our history, vetting process, and what makes us the most trusted name in Santa entertainment." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Santa Claus and Company",
+    "url": "https://santaclausandcompany.com",
+    "telephone": "+16029548697",
+    "email": "santa@santaclausandcompany.com",
+    "foundingDate": "1972",
+    "description": "America's oldest Santa Claus staffing agency, serving families and businesses nationwide since 1972.",
+    "areaServed": {"@type": "Country", "name": "United States"},
+    "address": {"@type": "PostalAddress", "addressLocality": "Phoenix", "addressRegion": "AZ", "addressCountry": "US"},
+    "sameAs": ["https://www.hiresanta.com"]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green: #1c3a28; --green-mid: #244d34; --green-deep: #152d1f;
+      --red: #8b2020; --red-bright: #a52828;
+      --gold: #c9a050; --gold-light: #e2c07a;
+      --parchment: #f7f1e6; --parchment2: #efe8d8; --cream: #fdfaf5;
+      --text: #1a1a1a; --muted: #5a5a5a;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--parchment); overflow-x: hidden; }
+    nav { background: var(--green-deep); border-bottom: 2px solid var(--gold); padding: 0 60px; display: flex; align-items: center; justify-content: space-between; height: 68px; position: sticky; top: 0; z-index: 100; }
+    .logo-wrap { display: flex; flex-direction: column; align-items: center; text-decoration: none; gap: 1px; }
+    .logo-est { font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+    .logo-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #fff; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+    .logo-rule { display: flex; align-items: center; gap: 6px; color: var(--gold); font-size: 0.6rem; letter-spacing: 0.2em; }
+    .logo-rule::before, .logo-rule::after { content: '—'; }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.83rem; font-weight: 500; letter-spacing: 0.04em; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-cta { background: var(--red) !important; color: #fff !important; padding: 10px 24px; border-radius: 2px; font-weight: 600 !important; letter-spacing: 0.06em !important; text-transform: uppercase; font-size: 0.76rem !important; }
+    .nav-cta:hover { background: var(--red-bright) !important; }
+    .breadcrumb { background: var(--green); padding: 12px 60px; display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: rgba(255,255,255,0.5); }
+    .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .breadcrumb-sep { color: rgba(255,255,255,0.25); }
+    .breadcrumb-current { color: var(--gold-light); }
+    .page-hero { position: relative; min-height: 420px; display: flex; align-items: flex-end; overflow: hidden; }
+    .page-hero-bg { position: absolute; inset: 0; background: url('https://www.hiresanta.com/wp-content/uploads/2019/01/hire-santa-claus-2.jpg') center top/cover no-repeat; }
+    .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(21,45,31,0.95) 20%, rgba(21,45,31,0.6) 60%, rgba(21,45,31,0.3) 100%); }
+    .page-hero-content { position: relative; z-index: 2; padding: 60px 72px; width: 100%; }
+    .page-hero-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .eyebrow-line { width: 28px; height: 1px; background: var(--gold); }
+    .eyebrow-text { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3.2rem); color: #fff; font-weight: 700; line-height: 1.1; max-width: 700px; margin-bottom: 16px; }
+    .page-hero-sub { color: rgba(255,255,255,0.65); font-size: 1rem; line-height: 1.7; max-width: 580px; font-weight: 300; }
+    .page-body { max-width: 1160px; margin: 0 auto; padding: 72px 60px; display: grid; grid-template-columns: 1fr 360px; gap: 72px; align-items: start; }
+    .content h2 { font-family: 'Playfair Display', serif; font-size: 1.9rem; color: var(--green-deep); font-weight: 700; margin-bottom: 16px; line-height: 1.2; }
+    .content h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--green-deep); font-weight: 600; margin: 32px 0 12px; }
+    .content p { color: var(--muted); font-size: 0.95rem; line-height: 1.85; margin-bottom: 18px; }
+    .content p strong { color: var(--text); }
+    .section-ornament-left { display: flex; align-items: center; gap: 12px; margin: 12px 0 28px; color: var(--gold); }
+    .section-ornament-left::after { content: ''; display: block; width: 60px; height: 1px; background: var(--gold); }
+    .feature-photo { width: 100%; border-radius: 3px; overflow: hidden; margin: 32px 0; }
+    .feature-photo img { width: 100%; display: block; aspect-ratio: 16/9; object-fit: cover; }
+    .feature-photo-caption { background: var(--green); color: rgba(255,255,255,0.6); font-size: 0.75rem; padding: 10px 16px; text-align: center; font-style: italic; }
+    .photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 32px 0; }
+    .photo-pair img { width: 100%; border-radius: 3px; aspect-ratio: 4/5; object-fit: cover; object-position: top; display: block; }
+    .why-list { list-style: none; margin: 20px 0 28px; display: flex; flex-direction: column; gap: 14px; }
+    .why-list li { display: flex; align-items: flex-start; gap: 14px; font-size: 0.92rem; color: var(--text); line-height: 1.6; padding-bottom: 14px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .why-list li:last-child { border-bottom: none; }
+    .why-icon { width: 34px; height: 34px; min-width: 34px; background: var(--green); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 1rem; margin-top: 1px; }
+    .why-list li strong { display: block; color: var(--green-deep); margin-bottom: 2px; font-size: 0.9rem; }
+    .timeline { margin: 28px 0; border-left: 2px solid var(--gold); padding-left: 28px; display: flex; flex-direction: column; gap: 28px; }
+    .timeline-item { position: relative; }
+    .timeline-item::before { content: ''; position: absolute; left: -35px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--gold); border: 2px solid var(--parchment); }
+    .timeline-year { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--red); font-weight: 700; margin-bottom: 4px; }
+    .timeline-item p { color: var(--muted); font-size: 0.88rem; line-height: 1.7; margin: 0; }
+    .vetting-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .vetting-step { background: var(--cream); border: 1px solid rgba(28,58,40,0.1); border-radius: 3px; padding: 20px; }
+    .vetting-num { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+    .vetting-step h4 { font-size: 0.88rem; font-weight: 700; color: var(--green-deep); margin-bottom: 6px; }
+    .vetting-step p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; margin: 0; }
+    .sidebar { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 24px; }
+    .sidebar-form { background: var(--green-deep); border-radius: 3px; overflow: hidden; box-shadow: 0 16px 48px rgba(0,0,0,0.15); }
+    .sidebar-form-header { background: var(--red); padding: 20px 24px; text-align: center; }
+    .sidebar-form-header .eyebrow { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 4px; display: block; }
+    .sidebar-form-header h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #fff; font-weight: 700; line-height: 1.2; }
+    .sidebar-form-body { padding: 24px; }
+    .sfg { margin-bottom: 14px; }
+    .sfg label { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 6px; }
+    .sfg input, .sfg select, .sfg textarea { width: 100%; padding: 11px 13px; border: 1.5px solid rgba(255,255,255,0.1); border-radius: 2px; background: rgba(255,255,255,0.08); color: #fff; font-family: 'Inter', sans-serif; font-size: 0.88rem; transition: border-color 0.2s; }
+    .sfg input::placeholder, .sfg textarea::placeholder { color: rgba(255,255,255,0.3); }
+    .sfg select { color: rgba(255,255,255,0.7); }
+    .sfg select option { background: var(--green-deep); color: #fff; }
+    .sfg input:focus, .sfg select:focus, .sfg textarea:focus { outline: none; border-color: var(--gold); }
+    .sfg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .sidebar-submit { width: 100%; padding: 14px; background: var(--gold); color: var(--green-deep); border: none; border-radius: 2px; font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; margin-top: 4px; }
+    .sidebar-submit:hover { background: var(--gold-light); }
+    .sidebar-note { text-align: center; font-size: 0.7rem; color: rgba(255,255,255,0.3); margin-top: 10px; }
+    .sidebar-contact { background: var(--cream); border: 1px solid rgba(28,58,40,0.1); border-radius: 3px; padding: 24px; }
+    .sidebar-contact h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--green-deep); margin-bottom: 16px; font-weight: 700; }
+    .contact-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .contact-icon { font-size: 1.1rem; }
+    .contact-row p { font-size: 0.83rem; color: var(--muted); line-height: 1.4; }
+    .contact-row a { color: var(--green); font-weight: 600; text-decoration: none; font-size: 0.95rem; display: block; }
+    .contact-row a:hover { text-decoration: underline; }
+    .sidebar-trust { background: var(--parchment2); border-radius: 3px; padding: 24px; border-left: 3px solid var(--gold); }
+    .sidebar-trust h4 { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; font-weight: 700; }
+    .trust-item { display: flex; align-items: center; gap: 10px; font-size: 0.83rem; color: var(--text); margin-bottom: 10px; }
+    .trust-item:last-child { margin-bottom: 0; }
+    .trust-check { color: var(--green); font-weight: 700; font-size: 0.75rem; }
+    .quote-block { background: var(--green); border-radius: 3px; padding: 32px; margin: 32px 0; }
+    .quote-block blockquote { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: #fff; font-style: italic; line-height: 1.6; margin-bottom: 12px; }
+    .quote-block cite { font-size: 0.8rem; color: var(--gold); font-style: normal; letter-spacing: 0.05em; }
+    footer { background: #080c10; padding: 72px 60px 32px; border-top: 3px solid var(--gold); }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr; gap: 56px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .footer-brand-name { font-family: 'Playfair Display', serif; color: #fff; font-size: 1.15rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+    .footer-brand-sub { font-size: 0.65rem; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-brand-rule { width: 40px; height: 1px; background: var(--gold); margin-bottom: 16px; }
+    .footer-brand p { font-size: 0.83rem; color: rgba(255,255,255,0.35); line-height: 1.75; max-width: 260px; }
+    .footer-contact { margin-top: 20px; }
+    .footer-contact a { display: block; color: rgba(255,255,255,0.4); font-size: 0.82rem; text-decoration: none; margin-bottom: 7px; transition: color 0.2s; }
+    .footer-contact a:hover { color: var(--gold); }
+    .fc h4 { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 20px; font-weight: 700; }
+    .fc ul { list-style: none; }
+    .fc ul li { margin-bottom: 11px; }
+    .fc ul li a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .fc ul li a:hover { color: var(--gold-light); }
+    .footer-est { text-align: center; }
+    .footer-est-ornament { color: var(--gold); font-size: 0.7rem; display: block; letter-spacing: 0.1em; margin-bottom: 6px; }
+    .footer-est-year { font-family: 'Playfair Display', serif; font-size: 2.4rem; color: #fff; line-height: 1; border: 1px solid rgba(201,160,80,0.3); padding: 16px 24px; display: inline-block; }
+    .footer-est-label { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-top: 8px; display: block; }
+    .footer-bottom { padding-top: 28px; display: flex; justify-content: space-between; align-items: center; font-size: 0.77rem; color: rgba(255,255,255,0.2); flex-wrap: wrap; gap: 10px; }
+    .footer-family a { color: rgba(255,255,255,0.3); text-decoration: none; }
+    .footer-family a:hover { color: var(--gold); }
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; } .breadcrumb { padding: 10px 20px; } .page-hero-content { padding: 40px 24px; }
+      .page-body { grid-template-columns: 1fr; padding: 48px 24px; gap: 40px; } .sidebar { position: static; }
+      .vetting-steps { grid-template-columns: 1fr; } .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; } footer { padding: 48px 24px 24px; }
+      .photo-pair { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo-wrap">
+    <span class="logo-est">Est. 1972</span>
+    <span class="logo-name">Santa Claus &amp; Company</span>
+    <span class="logo-rule">Nationwide</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="services/">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="rates.html">Rates</a></li>
+    <li><a href="locations/">Locations</a></li>
+    <li><a href="hire-santa.html" class="nav-cta">Book Santa</a></li>
+  </ul>
+</nav>
+<div class="breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="breadcrumb-sep">›</span>
+  <span class="breadcrumb-current">About Us</span>
+</div>
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Our Story · Since 1972</span>
+    </div>
+    <h1>America's Original<br />Santa Claus Agency</h1>
+    <p class="page-hero-sub">Founded in Arizona in 1972. Over 50 years of connecting families and businesses with the finest Santa Claus entertainers in the country.</p>
+  </div>
+</section>
+<div class="page-body">
+  <main class="content">
+    <h2>The Oldest Santa Staffing Agency in the United States</h2>
+    <div class="section-ornament-left"><span style="color:var(--gold)">✦</span></div>
+    <p>In 1972, when most "entertainment agencies" were booking wedding bands and local talent, Santa Claus and Company opened its doors in Arizona with one very specific mission: to represent the finest professional Santa Claus entertainers in the country. That singular focus hasn't changed in over five decades.</p>
+    <p>We are, to our knowledge, <strong>the longest-running Santa Claus staffing agency in the United States</strong>. That's not a marketing claim — it's a documented history. We were doing this before the internet, before online booking, before anyone thought to call it the "experience economy." We simply knew that bringing Santa to life, authentically, was something people would always value.</p>
+    <p>Today, Santa Claus and Company serves families, corporations, retailers, nonprofits, and communities across the nation. Whether you're in Phoenix or Philadelphia, Dallas or Denver, our commitment is the same: an exceptional Santa who arrives prepared, stays in character, and creates a memory that outlasts every gift under the tree.</p>
+
+    <div class="feature-photo">
+      <img src="https://santaclausandcompany.com/wp-content/uploads/2022/10/HireSanta-Real-Santa-Claus-small.jpg" alt="Real Santa Claus entertainer from Santa Claus and Company" />
+      <div class="feature-photo-caption">One of our professional Santa Claus entertainers — real beard, real presence, unforgettable.</div>
+    </div>
+
+    <h3>Our History</h3>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">1972</div>
+        <p>Founded in Phoenix, Arizona. The first formal Santa Claus staffing agency of its kind in the country. Our founder recognized that authentic, professional Santa experiences required the same rigor as any performing arts booking — vetting, contracts, training, and accountability.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1980s</div>
+        <p>Expanded from private home visits into corporate and retail. As the Valley of the Sun grew into a major metro, so did demand for premium Santa experiences at office parties, malls, and community events. We grew with it.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">1990s</div>
+        <p>Formalized our background-check and vetting process. As awareness around child safety grew nationally, we implemented a structured screening program that has since become the industry standard we've always held ourselves to.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2000s</div>
+        <p>Joined the HireSanta.com family of companies, expanding reach nationwide. What started as an Arizona institution became a resource for clients from coast to coast — without ever compromising the personal attention that built our reputation.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Today</div>
+        <p>Over 50 years in. Still the most trusted name in Santa Claus entertainment. Still personally involved in every booking. Still doing this because we love what it means — and what it does to a room when Santa walks in.</p>
+      </div>
+    </div>
+
+    <h3>The Vetting Process</h3>
+    <p>Anyone can put on a red suit. What separates our Santas isn't the costume — it's everything that happens before they ever arrive at your event. Here's how we screen every entertainer in our network:</p>
+
+    <div class="vetting-steps">
+      <div class="vetting-step">
+        <div class="vetting-num">01</div>
+        <h4>Application Review</h4>
+        <p>Every prospective Santa submits a detailed application. We review experience, event history, and references before proceeding.</p>
+      </div>
+      <div class="vetting-step">
+        <div class="vetting-num">02</div>
+        <h4>Background Check</h4>
+        <p>No exceptions. Every Santa is run through a comprehensive background screening. This has been our policy since before it was common practice.</p>
+      </div>
+      <div class="vetting-step">
+        <div class="vetting-num">03</div>
+        <h4>In-Person Interview</h4>
+        <p>We meet every Santa personally. We assess presence, warmth, professionalism, and how they handle unexpected situations.</p>
+      </div>
+      <div class="vetting-step">
+        <div class="vetting-num">04</div>
+        <h4>Performance Standards</h4>
+        <p>We review appearance (real beards preferred), costume quality, and verify the entertainer can maintain character for the full duration of an event.</p>
+      </div>
+      <div class="vetting-step">
+        <div class="vetting-num">05</div>
+        <h4>Ongoing Evaluation</h4>
+        <p>We collect client feedback after every event. Santas who don't meet our standards aren't re-booked. Simple as that.</p>
+      </div>
+      <div class="vetting-step">
+        <div class="vetting-num">06</div>
+        <h4>Professionalism Standards</h4>
+        <p>Timeliness, communication, and conduct are non-negotiable. Our Santas represent our 50+ year reputation every time they show up.</p>
+      </div>
+    </div>
+
+    <div class="quote-block">
+      <blockquote>"We don't just staff Santas. We protect the magic — because once a child stops believing, you can't get that back."</blockquote>
+      <cite>— Santa Claus and Company, Est. 1972</cite>
+    </div>
+
+    <h3>Our Team</h3>
+    <p>Behind every booking is a small, dedicated team of professionals who have spent years — in some cases, careers — inside the Santa entertainment industry. We know this world. We've seen what makes a booking great and what makes it fall apart.</p>
+    <p>We're not a tech platform with an algorithm. We're people who answer the phone, read your inquiry, and match you with the right Santa based on your specific event needs. That personal touch is something we've never outsourced.</p>
+
+    <div class="photo-pair">
+      <img src="https://santaclausandcompany.com/wp-content/uploads/2022/10/Cards-Joe-Aiello-Low-Res-274x300.jpg" alt="Professional Santa entertainer Joe" />
+      <img src="https://santaclausandcompany.com/wp-content/uploads/2022/10/Cards-Mark-DeMonbrun-2.jpg" alt="Professional Santa entertainer Mark" />
+    </div>
+
+    <h3>Part of the HireSanta.com Family</h3>
+    <p>Santa Claus and Company is proudly part of the <a href="https://www.hiresanta.com" style="color:var(--green);font-weight:600;">HireSanta.com</a> family of companies — the country's most comprehensive Santa Claus resource. Together, we provide booking, talent management, and Santa entertainment services across the United States.</p>
+  </main>
+  <aside class="sidebar">
+    <div class="sidebar-form" id="book">
+      <div class="sidebar-form-header">
+        <span class="eyebrow">Ready to Book?</span>
+        <h3>Request a Quote</h3>
+      </div>
+      <div class="sidebar-form-body">
+        <!-- [gravityforms id="1"] -->
+        <div style="background:rgba(255,255,255,0.05);border-radius:2px;padding:20px;text-align:center;color:rgba(255,255,255,0.4);font-size:0.85rem;">Loading form...</div>
+      </div>
+    </div>
+    <div class="sidebar-contact">
+      <h4>Talk to a Human</h4>
+      <div class="contact-row">
+        <span class="contact-icon">📞</span>
+        <div><p>Call us directly</p><a href="tel:6029548697">(602) 954-8697</a></div>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon">✉️</span>
+        <div><p>Email us</p><a href="mailto:santa@santaclausandcompany.com" style="font-size:0.8rem;">santa@santaclausandcompany.com</a></div>
+      </div>
+    </div>
+    <div class="sidebar-trust">
+      <h4>Why We're Different</h4>
+      <div class="trust-item"><span class="trust-check">✓</span> Founded 1972 — oldest in the US</div>
+      <div class="trust-item"><span class="trust-check">✓</span> Every Santa background-checked</div>
+      <div class="trust-item"><span class="trust-check">✓</span> Real beards, real presence</div>
+      <div class="trust-item"><span class="trust-check">✓</span> Personal booking — not an algorithm</div>
+      <div class="trust-item"><span class="trust-check">✓</span> Serving clients nationwide</div>
+    </div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Santa Claus &amp; Company</div>
+      <div class="footer-brand-sub">Est. 1972 &nbsp;·&nbsp; Nationwide</div>
+      <div class="footer-brand-rule"></div>
+      <p>America's original Santa Claus staffing agency. Connecting families and businesses with exceptional, vetted Santas since 1972.</p>
+      <div class="footer-contact">
+        <a href="tel:6029548697">📞 (602) 954-8697</a>
+        <a href="mailto:santa@santaclausandcompany.com">✉ santa@santaclausandcompany.com</a>
+      </div>
+    </div>
+    <div class="fc">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services/home-visits.html">Home Visits</a></li>
+        <li><a href="services/corporate-events.html">Corporate Events</a></li>
+        <li><a href="services/mall-retail.html">Mall &amp; Retail</a></li>
+        <li><a href="services/parades.html">Parades</a></li>
+        <li><a href="services/school-daycare.html">Schools &amp; Daycares</a></li>
+        <li><a href="services/charity-events.html">Charity Events</a></li>
+      </ul>
+    </div>
+    <div class="fc">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="hire-santa.html">Book Santa</a></li>
+        <li><a href="rates.html">Rates &amp; Pricing</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-est">
+      <span class="footer-est-ornament">✦ &nbsp; Since &nbsp; ✦</span>
+      <div class="footer-est-year">EST.<br />1972</div>
+      <span class="footer-est-label">America's Original Santa Agency</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Santa Claus and Company. All rights reserved.</span>
+    <span class="footer-family">Part of the <a href="https://www.hiresanta.com" target="_blank">HireSanta.com</a> family of companies.</span>
+  </div>
+</footer>
+</body>
+</html>
