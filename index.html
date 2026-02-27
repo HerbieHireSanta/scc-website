@@ -49,6 +49,8 @@
       color: var(--gold); font-size: 0.6rem; letter-spacing: 0.2em;
     }
     .logo-rule::before, .logo-rule::after { content: '—'; }
+    .svc-img { width: 100%; height: 200px; background-size: cover; background-position: center top; }
+    .svc-body { padding: 24px 28px 28px; }
     .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
     .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.83rem; font-weight: 500; letter-spacing: 0.04em; transition: color 0.2s; }
     .nav-links a:hover { color: var(--gold-light); }
@@ -190,7 +192,7 @@
     .svc-card {
       border: 1px solid rgba(28,58,40,0.12);
       border-radius: 3px;
-      padding: 40px 28px;
+      overflow: hidden;
       background: var(--cream);
       transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
       text-align: left;
@@ -199,14 +201,6 @@
       box-shadow: 0 8px 32px rgba(28,58,40,0.1);
       transform: translateY(-4px);
       border-color: var(--gold);
-    }
-    .svc-icon-wrap {
-      width: 52px; height: 52px;
-      border: 1.5px solid var(--red);
-      border-radius: 2px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 20px;
-      font-size: 1.4rem;
     }
     .svc-card h3 {
       font-family: 'Playfair Display', serif;
@@ -499,7 +493,7 @@
   <a href="#" class="logo-wrap">
     <span class="logo-est">Est. 1972</span>
     <span class="logo-name">Santa Claus &amp; Company</span>
-    <span class="logo-rule">Arizona</span>
+    <span class="logo-rule">Est. 1972</span>
   </a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
@@ -521,7 +515,7 @@
     <p class="hero-sub">Santa Claus and Company has been connecting families and organizations with exceptional, fully vetted Santa Claus entertainers for over 50 years — in Arizona and across the nation.</p>
     <div class="hero-btns">
       <a href="#book" class="btn-red">Book Your Santa Now</a>
-      <a href="tel:6029548697" class="btn-outline">(602) 954-8697</a>
+
     </div>
   </div>
 </section>
@@ -531,7 +525,7 @@
   <div class="trust-item"><span class="trust-dot"></span>50+ Years in Business</div>
   <div class="trust-item"><span class="trust-dot"></span>Fully Background-Checked Santas</div>
   <div class="trust-item"><span class="trust-dot"></span>Corporate &amp; Private Events</div>
-  <div class="trust-item"><span class="trust-dot"></span>Arizona &amp; Nationwide</div>
+  <div class="trust-item"><span class="trust-dot"></span>Nationwide Service</div>
   <div class="trust-item"><span class="trust-dot"></span>5-Star Rated</div>
 </div>
 
@@ -542,12 +536,12 @@
     <h2 class="section-title">Our Services</h2>
     <div class="section-ornament"><span>✦</span></div>
     <div class="svc-grid">
-      <div class="svc-card"><div class="svc-icon-wrap">🏠</div><h3>Home Visits</h3><p>Santa arrives at your home in full character — a personal, magical experience your family will never forget.</p></div>
-      <div class="svc-card"><div class="svc-icon-wrap">🏢</div><h3>Corporate Events</h3><p>Bring the holiday spirit to your company party or client event with a professional Santa who commands the room.</p></div>
-      <div class="svc-card"><div class="svc-icon-wrap">🛍️</div><h3>Mall &amp; Retail</h3><p>Drive foot traffic and create shareable holiday moments that shoppers talk about for years.</p></div>
-      <div class="svc-card"><div class="svc-icon-wrap">🎉</div><h3>Parades &amp; Appearances</h3><p>From grand entrances to tree lightings and community parades, we deliver the moment every time.</p></div>
-      <div class="svc-card"><div class="svc-icon-wrap">🏫</div><h3>Schools &amp; Daycares</h3><p>Safe, vetted, age-appropriate Santa visits that light up students and staff from the first ho-ho-ho.</p></div>
-      <div class="svc-card"><div class="svc-icon-wrap">💛</div><h3>Charity &amp; Nonprofit</h3><p>We partner with nonprofits to spread the spirit of giving — Santa appearances that warm every heart in the room.</p></div>
+      <div class="svc-card"><div class="svc-img" style="background-image:url('https://www.hiresanta.com/wp-content/uploads/2022/10/family-events.jpg')"></div><div class="svc-body"><h3>Home Visits</h3><p>Santa arrives at your home in full character — a personal, magical experience your family will never forget.</p></div></div>
+      <div class="svc-card"><div class="svc-img" style="background-image:url('https://www.hiresanta.com/wp-content/uploads/2022/10/corporate-events.jpg')"></div><div class="svc-body"><h3>Corporate Events</h3><p>Bring the holiday spirit to your company party or client event with a professional Santa who commands the room.</p></div></div>
+      <div class="svc-card"><div class="svc-img" style="background-image:url('https://www.hiresanta.com/wp-content/uploads/2022/10/mall-retail.jpg')"></div><div class="svc-body"><h3>Mall &amp; Retail</h3><p>Drive foot traffic and create shareable holiday moments that shoppers talk about for years.</p></div></div>
+      <div class="svc-card"><div class="svc-img" style="background-image:url('https://santaclausandcompany.com/wp-content/uploads/2022/10/HireSanta-Real-Santa-Claus-small.jpg')"></div><div class="svc-body"><h3>Parades &amp; Appearances</h3><p>From grand entrances to tree lightings and community parades, we deliver the moment every time.</p></div></div>
+      <div class="svc-card"><div class="svc-img" style="background-image:url('https://www.hiresanta.com/wp-content/uploads/2019/01/hire-santa-claus-2.jpg')"></div><div class="svc-body"><h3>Schools &amp; Daycares</h3><p>Safe, vetted, age-appropriate Santa visits that light up students and staff from the first ho-ho-ho.</p></div></div>
+      <div class="svc-card"><div class="svc-img" style="background-image:url('https://www.hiresanta.com/wp-content/uploads/2022/10/talent-agency.jpg')"></div><div class="svc-body"><h3>Charity &amp; Nonprofit</h3><p>We partner with nonprofits to spread the spirit of giving — Santa appearances that warm every heart in the room.</p></div></div>
     </div>
   </div>
 </section>
@@ -645,7 +639,7 @@
       <li>Over 50 years of trust and experience</li>
       <li>Every Santa fully vetted &amp; background-checked</li>
       <li>Transparent pricing — no hidden fees</li>
-      <li>Available statewide and select national events</li>
+      <li>Available nationwide — all 50 states</li>
       <li>Fast response — usually within 24 hours</li>
     </ul>
   </div>
@@ -654,22 +648,40 @@
       <span class="eyebrow">Request a Quote</span>
       <h3>Book a Professional Santa</h3>
     </div>
-    <!-- [gravityforms id="X"] replaces below -->
+    <form action="https://formsubmit.co/elf@hiresanta.com" method="POST">
+      <input type="hidden" name="_cc" value="santa@hiresanta.com" />
+      <input type="hidden" name="_subject" value="New Santa Booking Request — SantaClausAndCompany.com" />
+      <input type="hidden" name="_next" value="https://www.santaclausandcompany.com/thank-you.html" />
+      <input type="hidden" name="_captcha" value="false" />
     <div class="fg fg-row">
-      <div><label>First Name</label><input type="text" placeholder="Jane" /></div>
-      <div><label>Last Name</label><input type="text" placeholder="Smith" /></div>
+      <div><label>First Name</label><input type="text" name="first_name" placeholder="Jane" /></div>
+      <div><label>Last Name</label><input type="text" name="last_name" placeholder="Smith" /></div>
     </div>
-    <div class="fg"><label>Email Address</label><input type="email" placeholder="jane@example.com" /></div>
-    <div class="fg"><label>Phone Number</label><input type="tel" placeholder="(602) 555-0100" /></div>
+    <div class="fg"><label>Email Address</label><input type="email" name="email" placeholder="jane@example.com" /></div>
+    <div class="fg"><label>Phone Number</label><input type="tel" name="phone" placeholder="(555) 000-0000" /></div>
     <div class="fg fg-row">
-      <div><label>Event Date</label><input type="date" /></div>
-      <div><label>Event Location</label><input type="text" placeholder="Phoenix, AZ" /></div>
+      <div><label>Event Date</label><input type="date" name="event_date" /></div>
+      <div><label>Event Location</label><input type="text" name="event_location" placeholder="City, State" /></div>
     </div>
     <div class="fg fg-row">
-      <div><label>Number of Guests</label><input type="text" placeholder="~50" /></div>
+      <div><label>Start Time</label><input type="time" name="start_time" /></div>
+      <div>
+        <label>Number of Hours</label>
+        <select name="hours">
+          <option value="">Select hours...</option>
+          <option value="1">1 Hour</option>
+          <option value="2">2 Hours</option>
+          <option value="3">3 Hours</option>
+          <option value="4">4 Hours</option>
+          <option value="5+">5+ Hours</option>
+        </select>
+      </div>
+    </div>
+    <div class="fg fg-row">
+      <div><label>Number of Guests</label><input type="text" name="guests" placeholder="~50" /></div>
       <div>
         <label>Event Type</label>
-        <select>
+        <select name="event_type">
           <option value="">Select type...</option>
           <option>Home Visit</option>
           <option>Corporate Event</option>
@@ -681,9 +693,10 @@
         </select>
       </div>
     </div>
-    <div class="fg"><label>Message / Special Requests</label><textarea rows="3" placeholder="Tell us anything helpful about your event..."></textarea></div>
-    <button class="form-submit">Request a Quote →</button>
+    <div class="fg"><label>Message / Special Requests</label><textarea name="message" rows="3" placeholder="Tell us anything helpful about your event..."></textarea></div>
+    <button type="submit" class="form-submit">Request a Quote →</button>
     <p class="form-footnote">🔒 Your information is private and secure. No spam.</p>
+    </form>
   </div>
 </section>
 
@@ -692,13 +705,9 @@
   <div class="footer-top">
     <div class="footer-brand">
       <div class="footer-brand-name">Santa Claus &amp; Company</div>
-      <div class="footer-brand-sub">Est. 1972 &nbsp;·&nbsp; Arizona</div>
+      <div class="footer-brand-sub">Est. 1972 &nbsp;·&nbsp; Nationwide</div>
       <div class="footer-brand-rule"></div>
-      <p>Arizona's original Santa Claus staffing agency. Connecting families and businesses with exceptional, vetted Santas since 1972.</p>
-      <div class="footer-contact">
-        <a href="tel:6029548697">📞 (602) 954-8697</a>
-        <a href="mailto:santa@santaclausandcompany.com">✉ santa@santaclausandcompany.com</a>
-      </div>
+      <p>America's original Santa Claus staffing agency. Connecting families and businesses with exceptional, vetted Santas since 1972.</p>
     </div>
     <div class="fc">
       <h4>Services</h4>
@@ -724,7 +733,7 @@
     <div class="footer-est">
       <span class="footer-est-ornament">✦ &nbsp; Since &nbsp; ✦</span>
       <div class="footer-est-year">EST.<br />1972</div>
-      <span class="footer-est-label">Arizona's Original Santa Agency</span>
+      <span class="footer-est-label">America's Original Santa Agency</span>
     </div>
   </div>
   <div class="footer-bottom">
